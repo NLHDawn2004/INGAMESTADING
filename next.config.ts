@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // Vinext checks multipart requests against this limit before API routing.
-  // Allow a 10 MiB image plus multipart form overhead.
-  experimental: { serverActions: { bodySizeLimit: '12mb' } },
+import type {NextConfig} from 'next';
+import path from 'node:path';
+const config:NextConfig={
+ turbopack:{resolveAlias:{'cloudflare:workers':'./lib/vercel-env.ts'}},
+ webpack(config,{webpack}){config.plugins.push(new webpack.NormalModuleReplacementPlugin(/^cloudflare:workers$/,path.resolve(process.cwd(),'lib/vercel-env.ts')));config.resolve.alias['cloudflare:workers']=path.resolve(process.cwd(),'lib/vercel-env.ts');return config;},
+ experimental:{serverActions:{bodySizeLimit:'4mb'}},
 };
-
-export default nextConfig;
+export default config;

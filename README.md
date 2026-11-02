@@ -40,3 +40,6 @@ Chưa thể xác nhận độ trễ hoặc độ chính xác của một trận 
 
 ## Bảng dọc đỏ trắng
 Giao diện & KV → Bảng dọc đỏ trắng → Lưu & áp dụng cấu hình. Mẫu 14 hàng, khung 1920×1080, nền trong suốt, bảng nằm bên phải. Các cột TEAM, PTS, ELIMS, ALIVE được căn sẵn; tên/logo/điểm do tool hiển thị. Ảnh xem trước dùng dữ liệu minh họa.
+
+## Vercel
+Build: npm run build:vercel. Cần DATABASE_URL và ADMIN_PASSWORD_HASH trong biến môi trường Vercel. Neon tự tạo bảng khi chạy lần đầu. Ảnh upload được lưu bền vững cùng dữ liệu trong Neon; bản web giới hạn request ảnh 4 MB. Chế độ local tiếp tục dùng Cloudflare D1/R2 như trước. Bridge chạy trên máy game và gửi dữ liệu lên đường dẫn HTTPS của web.
