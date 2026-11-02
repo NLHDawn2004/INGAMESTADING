@@ -1,0 +1,922 @@
+[2026-10-27 21:10:01.331][1][82] SendEventLog: EventTypeEnterGame {"match_id":2115083590209026048,"group_mode":3}
+[2026-10-27 21:10:01.341][1][82] [UIModelSpectator] AddPlayer id16777217,namePLAYER,gsTeam1
+[2026-10-27 21:10:01.369][1][82] [UIModelSpectator] AddPlayer id33554434,namePLAYER,gsTeam2
+[2026-10-27 21:10:01.378][1][82] [UIModelSpectator] AddPlayer id50331651,namePLAYER,gsTeam3
+[2026-10-27 21:10:01.389][1][82] [UIModelSpectator] AddPlayer id67108868,namePLAYER,gsTeam4
+[2026-10-27 21:10:01.398][1][82] [UIModelSpectator] AddPlayer id83886085,namePLAYER,gsTeam5
+[2026-10-27 21:10:01.412][1][82] [UIModelSpectator] AddPlayer id83886086,namePLAYER,gsTeam5
+[2026-10-27 21:10:01.423][1][82] [UIModelSpectator] AddPlayer id100663303,namePLAYER,gsTeam6
+[2026-10-27 21:10:01.434][1][82] [UIModelSpectator] AddPlayer id117440520,namePLAYER,gsTeam7
+[2026-10-27 21:10:01.443][1][82] [UIModelSpectator] AddPlayer id50331657,namePLAYER,gsTeam3
+[2026-10-27 21:10:01.453][1][82] [UIModelSpectator] AddPlayer id117440523,namePLAYER,gsTeam7
+[2026-10-27 21:10:01.467][1][82] [UIModelSpectator] AddPlayer id50331660,namePLAYER,gsTeam3
+[2026-10-27 21:10:01.476][1][82] [UIModelSpectator] AddPlayer id100663309,namePLAYER,gsTeam6
+[2026-10-27 21:10:01.485][1][82] [UIModelSpectator] AddPlayer id33554446,namePLAYER,gsTeam2
+[2026-10-27 21:10:01.495][1][82] [UIModelSpectator] AddPlayer id67108879,namePLAYER,gsTeam4
+[2026-10-27 21:10:01.504][1][82] [UIModelSpectator] AddPlayer id100663312,namePLAYER,gsTeam6
+[2026-10-27 21:10:01.515][1][82] [UIModelSpectator] AddPlayer id117440529,namePLAYER,gsTeam7
+[2026-10-27 21:10:01.525][1][82] [UIModelSpectator] AddPlayer id100663314,namePLAYER,gsTeam6
+[2026-10-27 21:10:01.537][1][82] [UIModelSpectator] AddPlayer id134217747,namePLAYER,gsTeam8
+[2026-10-27 21:10:01.550][1][82] [UIModelSpectator] AddPlayer id67108884,namePLAYER,gsTeam4
+[2026-10-27 21:10:01.560][1][82] [UIModelSpectator] AddPlayer id33554453,namePLAYER,gsTeam2
+[2026-10-27 21:10:01.568][1][82] [UIModelSpectator] AddPlayer id150994966,namePLAYER,gsTeam9
+[2026-10-27 21:10:01.579][1][82] [UIModelSpectator] AddPlayer id150994967,namePLAYER,gsTeam9
+[2026-10-27 21:10:01.592][1][82] [UIModelSpectator] AddPlayer id83886104,namePLAYER,gsTeam5
+[2026-10-27 21:10:01.601][1][82] [UIModelSpectator] AddPlayer id134217753,namePLAYER,gsTeam8
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: Tiến TeamID: 2
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: FEAR TeamID: 3
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: nct TeamID: 4
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: PHƯƠNG SỆT TeamID: 5
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: FD ESP TeamID: 7
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: f168 TeamID: 8
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: PQ ACADEMY TeamID: 12
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: WAGA ESP TeamID: 13
+[2026-10-27 21:10:01.795][1][82] OnTeamScoreInited -> TeamName: AA TeamID: 14
+[2026-10-27 21:10:01.820][1][82] [UIModelSpectator] AddPlayer id33554458,namePLAYER,gsTeam2
+[2026-10-27 21:10:01.831][1][82] [UIModelSpectator] AddPlayer id50331675,namePLAYER,gsTeam3
+[2026-10-27 21:10:01.842][1][82] [UIModelSpectator] AddPlayer id150994972,namePLAYER,gsTeam9
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: Tiến TeamID: 2
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: FEAR TeamID: 3
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: nct TeamID: 4
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: PHƯƠNG SỆT TeamID: 5
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: AWK TeamID: 6
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: FD ESP TeamID: 7
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: f168 TeamID: 8
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: PQ ACADEMY TeamID: 12
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: WAGA ESP TeamID: 13
+[2026-10-27 21:10:01.847][1][82] OnTeamScoreInited -> TeamName: AA TeamID: 14
+[2026-10-27 21:10:01.853][1][82] [UIModelSpectator] AddPlayer id167772189,namePLAYER,gsTeam10
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: TD ESP TeamID: 1
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: Tiến TeamID: 2
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: FEAR TeamID: 3
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: nct TeamID: 4
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: PHƯƠNG SỆT TeamID: 5
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: AWK TeamID: 6
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: FD ESP TeamID: 7
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: f168 TeamID: 8
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: PQ ACADEMY TeamID: 12
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: WAGA ESP TeamID: 13
+[2026-10-27 21:10:01.861][1][82] OnTeamScoreInited -> TeamName: AA TeamID: 14
+[2026-10-27 21:10:01.867][1][82] [UIModelSpectator] AddPlayer id184549406,namePLAYER,gsTeam11
+[2026-10-27 21:10:01.884][1][82] [UIModelSpectator] AddPlayer id83886111,namePLAYER,gsTeam5
+[2026-10-27 21:10:01.896][1][82] [UIModelSpectator] AddPlayer id150994976,namePLAYER,gsTeam9
+[2026-10-27 21:10:01.907][1][82] [UIModelSpectator] AddPlayer id184549409,namePLAYER,gsTeam11
+[2026-10-27 21:10:01.921][1][82] [UIModelSpectator] AddPlayer id134217762,namePLAYER,gsTeam8
+[2026-10-27 21:10:01.934][1][82] [UIModelSpectator] AddPlayer id16777251,namePLAYER,gsTeam1
+[2026-10-27 21:10:02.059][1][83] [UIModelSpectator] AddPlayer id167772196,namePLAYER,gsTeam10
+[2026-10-27 21:10:02.075][1][83] [UIModelSpectator] AddPlayer id167772197,namePLAYER,gsTeam10
+[2026-10-27 21:10:02.086][1][83] [UIModelSpectator] AddPlayer id184549414,namePLAYER,gsTeam11
+[2026-10-27 21:10:03.758][1][145] [UIModelSpectator] AddPlayer id16777255,namePLAYER,gsTeam1
+[2026-10-27 21:10:07.912][1][271] [UIModelSpectator] AddPlayer id16777256,namePLAYER,gsTeam1
+[2026-10-27 21:10:10.312][1][344] [UIModelSpectator] AddPlayer id117440553,namePLAYER,gsTeam7
+[2026-10-27 21:10:11.913][1][392] [UIModelSpectator] AddPlayer id134217770,namePLAYER,gsTeam8
+[2026-10-27 21:10:17.355][1][557] [UIModelSpectator] AddPlayer id67108907,namePLAYER,gsTeam4
+[2026-10-27 21:10:37.619][1][1171] [UIModelSpectator] AddPlayer id184549420,namePLAYER,gsTeam11
+[2026-10-27 21:10:54.665][1][319] [UIModelSpectator] AddPlayer id167772205,namePLAYER,gsTeam10
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 1 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 2 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 3 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 4 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:32.329][1][1460] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:32.330][1][1460] Player 184549420 Dead, killed by 67108907
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 4 TeamScore: 1
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 1 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 2 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 3 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:39.084][1][1665] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:39.085][1][1665] Player 16777255 Dead, killed by 117440529
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 4 TeamScore: 1
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 2 TeamScore: 1
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 1 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 3 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:43.210][1][1790] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:43.211][1][1790] Player 100663312 Dead, killed by 50331675
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 4 TeamScore: 1
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 2 TeamScore: 1
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 3 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:49.713][1][1987] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:49.715][1][1987] Player 67108879 Dead, killed by 184549414
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 4 TeamScore: 2
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 2 TeamScore: 1
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 3 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:55.492][1][2162] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:55.517][1][2163] Player 33554453 Dead, killed by 117440520
+[2026-10-27 21:11:56.217][1][2184] [UIModelSpectator] AddPlayer id67108879,namePLAYER,gsTeam4
+[2026-10-27 21:11:56.222][1][2184] Revive Player 67108879, revivePosition=(285.56, 300.00, -300.51)
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 4 TeamScore: 2
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 2 TeamScore: 1
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 3 TeamScore: 1
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:11:56.242][1][2185] OnTeamScoreChanged -> TeamID: 14 TeamScore: 0
+[2026-10-27 21:11:56.243][1][2185] Player 33554434 Dead, killed by 16777217
+[2026-10-27 21:11:59.619][1][2287] [UIModelSpectator] AddPlayer id33554453,namePLAYER,gsTeam2
+[2026-10-27 21:11:59.621][1][2287] Revive Player 33554453, revivePosition=(-133.79, 300.00, -272.05)
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 4 TeamScore: 2
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 2 TeamScore: 1
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 3 TeamScore: 1
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:00.869][1][2325] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:00.870][1][2325] Player 117440529 Dead, killed by 33554446
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 4 TeamScore: 2
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 2 TeamScore: 2
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 3 TeamScore: 1
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 7 TeamScore: 0
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:01.220][1][2336] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:01.221][1][2336] Player 100663303 Dead, killed by 50331651
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 4 TeamScore: 2
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 2 TeamScore: 2
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 3 TeamScore: 1
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:05.121][1][2454] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:05.123][1][2454] Player 184549409 Dead, killed by 134217747
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 2 TeamScore: 2
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 3 TeamScore: 1
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:11.874][1][2659] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:11.875][1][2659] Player 16777251 Dead, killed by 117440520
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 2 TeamScore: 2
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 3 TeamScore: 2
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:14.974][1][2753] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:14.976][1][2753] Player 117440520 Dead, killed by 16777256
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 3 TeamScore: 2
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 8 TeamScore: 1
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:33.431][1][3312] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:33.432][1][3312] Player 67108879 Dead, killed by 50331675
+[2026-10-27 21:12:34.257][1][3337] [UIModelSpectator] AddPlayer id33554434,namePLAYER,gsTeam2
+[2026-10-27 21:12:34.261][1][3337] Revive Player 33554434, revivePosition=(-164.93, 300.00, 24.72)
+[2026-10-27 21:12:39.707][1][3502] [UIModelSpectator] AddPlayer id67108879,namePLAYER,gsTeam4
+[2026-10-27 21:12:39.711][1][3502] Revive Player 67108879, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 3 TeamScore: 2
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:39.959][1][3510] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:39.963][1][3510] Player 50331651 Dead, killed by 67108884
+[2026-10-27 21:12:44.333][1][3642] [UIModelSpectator] AddPlayer id16777255,namePLAYER,gsTeam1
+[2026-10-27 21:12:44.336][1][3642] Revive Player 16777255, revivePosition=(-133.79, 300.00, -272.05)
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 1 TeamScore: 1
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:47.183][1][3729] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:47.184][1][3729] Player 33554446 Dead, killed by 16777256
+[2026-10-27 21:12:49.083][1][3786] [UIModelSpectator] AddPlayer id184549420,namePLAYER,gsTeam11
+[2026-10-27 21:12:49.087][1][3786] Revive Player 184549420, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:12:49.208][1][3790] [UIModelSpectator] AddPlayer id16777251,namePLAYER,gsTeam1
+[2026-10-27 21:12:49.212][1][3790] Revive Player 16777251, revivePosition=(-133.79, 300.00, -272.05)
+[2026-10-27 21:12:49.658][1][3804] [UIModelSpectator] AddPlayer id184549409,namePLAYER,gsTeam11
+[2026-10-27 21:12:49.661][1][3804] Revive Player 184549409, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 4 TeamScore: 3
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 1 TeamScore: 2
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:12:50.384][1][3826] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:12:50.385][1][3826] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:12:50.385][1][3826] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:12:50.385][1][3826] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:12:50.385][1][3826] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:12:50.386][1][3826] Player 67108868 Dead, killed by 184549414
+[2026-10-27 21:12:53.109][1][3908] [UIModelSpectator] AddPlayer id100663312,namePLAYER,gsTeam6
+[2026-10-27 21:12:53.113][1][3908] Revive Player 100663312, revivePosition=(285.56, 300.00, -300.51)
+[2026-10-27 21:12:54.810][1][3960] [UIModelSpectator] AddPlayer id33554446,namePLAYER,gsTeam2
+[2026-10-27 21:12:54.813][1][3960] Revive Player 33554446, revivePosition=(-164.93, 300.00, 24.72)
+[2026-10-27 21:13:01.260][1][4155] [UIModelSpectator] AddPlayer id100663303,namePLAYER,gsTeam6
+[2026-10-27 21:13:01.263][1][4155] Revive Player 100663303, revivePosition=(305.68, 300.00, -252.78)
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 1 TeamScore: 2
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 12 TeamScore: 0
+[2026-10-27 21:13:01.935][1][4176] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:01.936][1][4176] Player 134217770 Dead, killed by 117440523
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 1 TeamScore: 2
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 14 TeamScore: 1
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:03.035][1][4209] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:03.036][1][4209] Player 134217747 Dead, killed by 100663309
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 1 TeamScore: 2
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 7 TeamScore: 1
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:05.309][1][4278] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:05.311][1][4278] Player 117440553 Dead, killed by 33554458
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 1 TeamScore: 2
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:05.785][1][4292] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:05.786][1][4292] Player 67108907 Dead, killed by 134217762
+[2026-10-27 21:13:06.635][1][4318] [UIModelSpectator] AddPlayer id50331651,namePLAYER,gsTeam3
+[2026-10-27 21:13:06.638][1][4318] Revive Player 50331651, revivePosition=(285.56, 300.00, -300.51)
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 2 TeamScore: 3
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:12.736][1][4503] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:12.738][1][4503] Player 33554458 Dead, killed by 184549414
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 2 TeamScore: 4
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:13.886][1][4538] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:13.888][1][4538] Player 134217762 Dead, killed by 50331675
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 2 TeamScore: 5
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 6 TeamScore: 0
+[2026-10-27 21:13:13.911][1][4539] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:13.913][1][4539] Player 100663309 Dead, killed by 50331660
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 2 TeamScore: 5
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:17.827][1][4657] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:17.828][1][4657] Player 16777251 Dead, killed by 167772189
+[2026-10-27 21:13:18.452][1][4676] [UIModelSpectator] AddPlayer id33554458,namePLAYER,gsTeam2
+[2026-10-27 21:13:18.455][1][4676] Revive Player 33554458, revivePosition=(180.47, 300.00, 39.53)
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 12 TeamScore: 1
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:20.653][1][4743] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:20.654][1][4743] Player 67108884 Dead, killed by 50331660
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:24.853][1][4870] OnTeamScoreChanged -> TeamID: 13 TeamScore: 0
+[2026-10-27 21:13:24.854][1][4870] Player 50331657 Dead, killed by 100663314
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:26.404][1][4917] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:26.404][1][4917] Player 117440523 Dead, killed by 150994976
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 3 TeamScore: 3
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:26.429][1][4918] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:28.681][1][4986] [UIModelSpectator] AddPlayer id50331657,namePLAYER,gsTeam3
+[2026-10-27 21:13:28.684][1][4986] Revive Player 50331657, revivePosition=(285.56, 300.00, -300.51)
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 6 TeamScore: 1
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:38.208][1][5275] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:38.209][1][5275] Player 167772197 Dead, killed by 16777256
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 14 TeamScore: 2
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 6 TeamScore: 2
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:41.584][1][5377] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:41.585][1][5377] Player 16777217 Dead, killed by 167772205
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 14 TeamScore: 3
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 6 TeamScore: 2
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:41.785][1][5383] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:41.785][1][5383] Player 184549409 Dead, killed by 33554434
+[2026-10-27 21:13:42.234][1][5397] [UIModelSpectator] AddPlayer id184549409,namePLAYER,gsTeam11
+[2026-10-27 21:13:42.237][1][5397] Revive Player 184549409, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 6 TeamScore: 2
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:43.234][1][5427] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:43.235][1][5427] Player 83886111 Dead, killed by 33554434
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:46.458][1][5525] OnTeamScoreChanged -> TeamID: 5 TeamScore: 0
+[2026-10-27 21:13:46.460][1][5525] Player 16777256 Dead, killed by 167772196
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 13 TeamScore: 1
+[2026-10-27 21:13:51.335][1][5673] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:13:51.336][1][5673] Player 33554434 Dead, killed by 83886086
+[2026-10-27 21:13:52.660][1][5713] [UIModelSpectator] AddPlayer id83886111,namePLAYER,gsTeam5
+[2026-10-27 21:13:52.663][1][5713] Revive Player 83886111, revivePosition=(180.47, 300.00, 39.53)
+[2026-10-27 21:14:01.963][1][5995] [UIModelSpectator] AddPlayer id134217770,namePLAYER,gsTeam8
+[2026-10-27 21:14:01.966][1][5995] Revive Player 134217770, revivePosition=(205.89, 300.00, -351.58)
+[2026-10-27 21:14:01.967][1][5995] [UIModelSpectator] AddPlayer id134217747,namePLAYER,gsTeam8
+[2026-10-27 21:14:01.969][1][5995] Revive Player 134217747, revivePosition=(283.06, 300.00, -298.18)
+[2026-10-27 21:14:01.970][1][5995] [UIModelSpectator] AddPlayer id134217762,namePLAYER,gsTeam8
+[2026-10-27 21:14:01.972][1][5995] Revive Player 134217762, revivePosition=(226.14, 300.00, -407.69)
+[2026-10-27 21:14:02.213][1][6002] [UIModelSpectator] AddPlayer id167772197,namePLAYER,gsTeam10
+[2026-10-27 21:14:02.217][1][6002] Revive Player 167772197, revivePosition=(-133.79, 300.00, -272.05)
+[2026-10-27 21:14:02.964][1][6025] [UIModelSpectator] AddPlayer id67108907,namePLAYER,gsTeam4
+[2026-10-27 21:14:02.966][1][6025] Revive Player 67108907, revivePosition=(360.96, 300.00, 11.12)
+[2026-10-27 21:14:06.127][1][6121] [UIModelSpectator] AddPlayer id33554434,namePLAYER,gsTeam2
+[2026-10-27 21:14:06.131][1][6121] Revive Player 33554434, revivePosition=(-8.23, 300.00, 136.50)
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 13 TeamScore: 2
+[2026-10-27 21:14:09.979][1][6238] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:09.980][1][6238] Player 50331660 Dead, killed by 150994967
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 13 TeamScore: 3
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 12 TeamScore: 2
+[2026-10-27 21:14:15.180][1][6395] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:15.181][1][6395] Player 50331651 Dead, killed by 150994976
+[2026-10-27 21:14:17.657][1][6470] [UIModelSpectator] AddPlayer id16777256,namePLAYER,gsTeam1
+[2026-10-27 21:14:17.660][1][6470] Revive Player 16777256, revivePosition=(-467.36, 300.00, -28.86)
+[2026-10-27 21:14:17.660][1][6470] [UIModelSpectator] AddPlayer id16777217,namePLAYER,gsTeam1
+[2026-10-27 21:14:17.663][1][6470] Revive Player 16777217, revivePosition=(-467.36, 300.00, -28.86)
+[2026-10-27 21:14:20.683][1][6562] [UIModelSpectator] AddPlayer id67108884,namePLAYER,gsTeam4
+[2026-10-27 21:14:20.686][1][6562] Revive Player 67108884, revivePosition=(259.36, 300.00, -280.51)
+[2026-10-27 21:14:24.733][1][6685] [UIModelSpectator] AddPlayer id100663309,namePLAYER,gsTeam6
+[2026-10-27 21:14:24.736][1][6685] Revive Player 100663309, revivePosition=(264.49, 300.00, -276.14)
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 1 TeamScore: 3
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 13 TeamScore: 3
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:26.584][1][6741] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:26.585][1][6741] Player 50331675 Dead, killed by 100663314
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 13 TeamScore: 3
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:30.160][1][6849] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:30.162][1][6849] Player 100663312 Dead, killed by 184549420
+[2026-10-27 21:14:36.336][1][7036] [UIModelSpectator] AddPlayer id67108868,namePLAYER,gsTeam4
+[2026-10-27 21:14:36.342][1][7036] Revive Player 67108868, revivePosition=(-8.23, 300.00, 136.50)
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 13 TeamScore: 4
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:38.512][1][7102] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:38.513][1][7102] Player 100663314 Dead, killed by 150994976
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 8 TeamScore: 2
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:41.612][1][7196] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:41.614][1][7196] Player 100663303 Dead, killed by 150994967
+[2026-10-27 21:14:48.466][1][7404] [UIModelSpectator] AddPlayer id16777251,namePLAYER,gsTeam1
+[2026-10-27 21:14:48.470][1][7404] Revive Player 16777251, revivePosition=(-322.18, 300.00, -277.80)
+[2026-10-27 21:14:49.915][1][7448] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:49.916][1][7448] OnTeamScoreChanged -> TeamID: 5 TeamScore: 1
+[2026-10-27 21:14:49.918][1][7448] Player 33554458 Dead, killed by 67108879
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 2 TeamScore: 6
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:54.317][1][7581] OnTeamScoreChanged -> TeamID: 5 TeamScore: 2
+[2026-10-27 21:14:54.320][1][7581] Player 150994972 Dead, killed by 83886085
+[2026-10-27 21:14:55.770][1][7625] [UIModelSpectator] AddPlayer id33554458,namePLAYER,gsTeam2
+[2026-10-27 21:14:55.773][1][7625] Revive Player 33554458, revivePosition=(180.47, 300.00, 39.53)
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 14 TeamScore: 4
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:14:57.895][1][7690] OnTeamScoreChanged -> TeamID: 5 TeamScore: 2
+[2026-10-27 21:14:57.897][1][7690] Player 184549420 Dead, killed by 50331657
+[2026-10-27 21:14:58.245][1][7700] [UIModelSpectator] AddPlayer id150994972,namePLAYER,gsTeam9
+[2026-10-27 21:14:58.248][1][7700] Revive Player 150994972, revivePosition=(264.49, 300.00, -276.14)
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 14 TeamScore: 5
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:15:07.047][1][7967] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:07.048][1][7967] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:15:07.048][1][7967] OnTeamScoreChanged -> TeamID: 5 TeamScore: 2
+[2026-10-27 21:15:07.049][1][7967] Player 83886111 Dead, killed by 33554434
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:15:08.723][1][8018] OnTeamScoreChanged -> TeamID: 5 TeamScore: 2
+[2026-10-27 21:15:08.724][1][8018] Player 83886085 Dead, killed by 33554434
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 12 TeamScore: 3
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 5 TeamScore: 3
+[2026-10-27 21:15:11.775][1][8110] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:15:11.776][1][8110] Player 134217747 Dead, killed by 83886086
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 5 TeamScore: 3
+[2026-10-27 21:15:17.652][1][8288] OnTeamScoreChanged -> TeamID: 7 TeamScore: 2
+[2026-10-27 21:15:17.653][1][8288] Player 184549409 Dead, killed by 100663309
+[2026-10-27 21:15:25.205][1][8517] [UIModelSpectator] AddPlayer id100663303,namePLAYER,gsTeam6
+[2026-10-27 21:15:25.209][1][8517] Revive Player 100663303, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 5 TeamScore: 3
+[2026-10-27 21:15:25.432][1][8524] OnTeamScoreChanged -> TeamID: 7 TeamScore: 3
+[2026-10-27 21:15:25.434][1][8524] Player 150994972 Dead, killed by 134217770
+[2026-10-27 21:15:27.007][1][8572] [UIModelSpectator] AddPlayer id150994972,namePLAYER,gsTeam9
+[2026-10-27 21:15:27.010][1][8572] Revive Player 150994972, revivePosition=(264.49, 300.00, -276.14)
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 1 TeamScore: 4
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:27.082][1][8574] OnTeamScoreChanged -> TeamID: 5 TeamScore: 3
+[2026-10-27 21:15:27.083][1][8574] Player 150994967 Dead, killed by 134217753
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 1 TeamScore: 5
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:30.783][1][8686] OnTeamScoreChanged -> TeamID: 5 TeamScore: 3
+[2026-10-27 21:15:30.785][1][8686] Player 150994976 Dead, killed by 184549406
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 14 TeamScore: 6
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 1 TeamScore: 5
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:32.884][1][8750] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:32.885][1][8750] Player 134217770 Dead, killed by 83886104
+[2026-10-27 21:15:33.659][1][8773] [UIModelSpectator] AddPlayer id134217747,namePLAYER,gsTeam8
+[2026-10-27 21:15:33.662][1][8773] Revive Player 134217747, revivePosition=(86.32, 300.00, -370.47)
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 14 TeamScore: 7
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 1 TeamScore: 5
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:33.982][1][8783] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:33.983][1][8783] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:33.983][1][8783] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:33.983][1][8783] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:33.983][1][8783] Player 67108879 Dead, killed by 33554453
+[2026-10-27 21:15:34.083][1][8786] [UIModelSpectator] AddPlayer id184549409,namePLAYER,gsTeam11
+[2026-10-27 21:15:34.088][1][8786] Revive Player 184549409, revivePosition=(264.49, 300.00, -276.14)
+[2026-10-27 21:15:35.360][1][8825] [UIModelSpectator] AddPlayer id67108879,namePLAYER,gsTeam4
+[2026-10-27 21:15:35.362][1][8825] Revive Player 67108879, revivePosition=(180.47, 300.00, 39.53)
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 14 TeamScore: 7
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:42.061][1][9028] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:42.062][1][9028] Player 150994966 Dead, killed by 184549414
+[2026-10-27 21:15:43.536][1][9073] [UIModelSpectator] AddPlayer id83886085,namePLAYER,gsTeam5
+[2026-10-27 21:15:43.539][1][9073] Revive Player 83886085, revivePosition=(86.32, 300.00, -370.47)
+[2026-10-27 21:15:43.540][1][9073] [UIModelSpectator] AddPlayer id83886111,namePLAYER,gsTeam5
+[2026-10-27 21:15:43.543][1][9073] Revive Player 83886111, revivePosition=(86.32, 300.00, -370.47)
+[2026-10-27 21:15:47.911][1][9205] [UIModelSpectator] AddPlayer id184549420,namePLAYER,gsTeam11
+[2026-10-27 21:15:47.915][1][9205] Revive Player 184549420, revivePosition=(264.49, 300.00, -276.14)
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 2 TeamScore: 7
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:54.589][1][9408] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:54.590][1][9408] Player 50331657 Dead, killed by 33554434
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 6 TeamScore: 3
+[2026-10-27 21:15:54.639][1][9409] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:15:54.939][1][9418] [UIModelSpectator] AddPlayer id150994976,namePLAYER,gsTeam9
+[2026-10-27 21:15:54.943][1][9418] Revive Player 150994976, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 5 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:06.642][1][9773] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:06.643][1][9773] Player 16777255 Dead, killed by 167772196
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 7 TeamScore: 4
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:12.691][1][9956] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:12.693][1][9956] Player 134217762 Dead, killed by 83886085
+[2026-10-27 21:16:14.242][1][10003] [UIModelSpectator] AddPlayer id134217762,namePLAYER,gsTeam8
+[2026-10-27 21:16:14.245][1][10003] Revive Player 134217762, revivePosition=(-112.62, 300.00, -378.03)
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 12 TeamScore: 4
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:16.353][1][10067] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:16.354][1][10067] Player 184549420 Dead, killed by 134217753
+[2026-10-27 21:16:16.552][1][10073] [UIModelSpectator] AddPlayer id100663312,namePLAYER,gsTeam6
+[2026-10-27 21:16:16.557][1][10073] Revive Player 100663312, revivePosition=(-133.79, 300.00, -272.05)
+[2026-10-27 21:16:20.254][1][10185] [UIModelSpectator] AddPlayer id16777255,namePLAYER,gsTeam1
+[2026-10-27 21:16:20.257][1][10185] Revive Player 16777255, revivePosition=(-322.18, 300.00, -277.80)
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 1 TeamScore: 6
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 12 TeamScore: 5
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:27.079][1][10392] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:27.080][1][10392] Player 150994972 Dead, killed by 100663309
+[2026-10-27 21:16:27.430][1][10403] [UIModelSpectator] AddPlayer id150994966,namePLAYER,gsTeam9
+[2026-10-27 21:16:27.432][1][10403] Revive Player 150994966, revivePosition=(-164.93, 300.00, 24.72)
+[2026-10-27 21:16:28.881][1][10447] [UIModelSpectator] AddPlayer id100663314,namePLAYER,gsTeam6
+[2026-10-27 21:16:28.885][1][10447] Revive Player 100663314, revivePosition=(49.41, 300.00, -159.33)
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 1 TeamScore: 7
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 12 TeamScore: 5
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 3 TeamScore: 4
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:30.907][1][10508] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:30.909][1][10508] Player 134217753 Dead, killed by 184549414
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 14 TeamScore: 8
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 1 TeamScore: 7
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 12 TeamScore: 5
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 3 TeamScore: 5
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:41.342][1][10824] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:41.342][1][10824] Player 134217762 Dead, killed by 16777251
+[2026-10-27 21:16:43.813][1][10899] [UIModelSpectator] AddPlayer id184549420,namePLAYER,gsTeam11
+[2026-10-27 21:16:43.816][1][10899] Revive Player 184549420, revivePosition=(-112.62, 300.00, -378.03)
+[2026-10-27 21:16:49.318][1][11066] [UIModelSpectator] AddPlayer id150994972,namePLAYER,gsTeam9
+[2026-10-27 21:16:49.322][1][11066] Revive Player 150994972, revivePosition=(-164.93, 300.00, 24.72)
+[2026-10-27 21:16:49.344][1][11067] [UIModelSpectator] AddPlayer id150994967,namePLAYER,gsTeam9
+[2026-10-27 21:16:49.348][1][11067] Revive Player 150994967, revivePosition=(-164.93, 300.00, 24.72)
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 14 TeamScore: 9
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 1 TeamScore: 7
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 12 TeamScore: 5
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 3 TeamScore: 5
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:16:57.898][1][11326] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:16:57.900][1][11326] Player 184549406 Dead, killed by 33554434
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 14 TeamScore: 10
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 2 TeamScore: 8
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 1 TeamScore: 7
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 13 TeamScore: 5
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 5 TeamScore: 5
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 7 TeamScore: 5
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 12 TeamScore: 5
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 3 TeamScore: 5
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 4 TeamScore: 4
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 6 TeamScore: 4
+[2026-10-27 21:17:03.678][1][11501] OnTeamScoreChanged -> TeamID: 8 TeamScore: 3
+[2026-10-27 21:17:03.680][1][11501] Player 184549414 Dead, killed by 33554453

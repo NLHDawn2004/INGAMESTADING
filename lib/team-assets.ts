@@ -1,0 +1,3 @@
+import {z} from 'zod';
+export const teamLogoSchema=z.string().max(300).refine(v=>!v||/^\/local-team-logos\/[a-f0-9]{64}$/.test(v)||/^\/(maps\/[A-Za-z]+\.webp|api\/media\/[a-f0-9-]+)$/.test(v)||(/^\/logos\/(?:[\p{L}\p{N}_ -]+\/)*[\p{L}\p{N}_ .-]+\.(png|jpe?g|webp|gif)$/iu.test(v)&&!v.includes('..')),'Dùng đường dẫn /logos/ten-team.png');
+export function logoPath(value:string){let path=value.trim().replace(/\\/g,'/');const marker='/public/logos/';const index=path.toLowerCase().indexOf(marker);if(index>=0)path='/logos/'+path.slice(index+marker.length);if(path.startsWith('logos/'))path='/'+path;return teamLogoSchema.parse(path);}

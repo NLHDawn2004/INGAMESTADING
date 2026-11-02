@@ -1,0 +1,49 @@
+.schedule-total-overlay{position:relative;width:1920px;height:1080px;overflow:hidden;color:#020a18}
+.schedule-total-kv{position:absolute;inset:0;width:1920px;height:1080px;max-width:none;pointer-events:none}
+/* Opaque panels replace every sample team, statistic and map in the reference KV. */
+.schedule-total-table{position:absolute;left:170px;top:347px;width:786px;height:598px;background:#020b1a;display:grid;grid-template-rows:repeat(12,minmax(0,1fr));gap:8px;isolation:isolate}
+.schedule-total-row{position:relative;display:grid;grid-template-columns:58px 44px minmax(0,1fr) 110px 110px 78px;align-items:center;background:#f7f7f7;color:#020a18;font-weight:900;animation:score-row-slide .5s ease-out var(--row-delay,250ms) 1 both;overflow:hidden;clip-path:polygon(0 0,42px 0,50px 8px,100% 8px,100% 100%,0 100%)}
+.schedule-total-row.podium{background:#00d4ee}.schedule-total-row>b,.schedule-total-row>strong{font-size:25px;line-height:1;text-align:center;font-variant-numeric:tabular-nums}
+.schedule-total-row>.schedule-total-name{text-align:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:25px;padding-left:12px;padding-right:28px}
+.schedule-total-logo{display:flex;align-items:center;justify-content:center;width:36px;height:36px}.schedule-total-logo img{width:100%;height:100%;object-fit:contain}.schedule-total-crown{position:absolute;right:300px;top:50%;transform:translateY(-50%)}
+.score-schedule-maps{position:absolute;left:1100px;top:140px;width:652px;height:824px;display:grid;background:#061022;isolation:isolate;overflow:hidden}
+.schedule-map-card{position:relative;min-width:0;min-height:0;overflow:hidden;background:linear-gradient(120deg,#071c37,#05284a);font-size:var(--map-font);color:white;animation:schedule-map-enter .4s ease-out var(--map-delay,0ms) 1 both;outline:1px solid #13d7f126;outline-offset:-1px}
+.schedule-map-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:schedule-map-enter .25s ease-out both}
+.schedule-map-shade{position:absolute;inset:0;background:linear-gradient(90deg,#000c,transparent 80%)}
+.schedule-map-card>header{position:absolute;inset:0 0 auto 0;height:24%;display:flex;align-items:center;padding:0 .8em;white-space:nowrap;font-size:.85em;font-weight:900;background:linear-gradient(110deg,#00cbe9 0%,#00bce8 78%,transparent 78.5%);color:#fff;line-height:1;z-index:1}
+.schedule-map-content{position:absolute;inset:25% 3% 3%;display:flex;align-items:center;justify-content:center;gap:.6em;overflow:hidden;animation:schedule-map-enter .3s ease-out 1 both}
+.schedule-map-booyah{font-size:2em;font-style:italic;color:#ffdb12;text-shadow:2px 2px #000;line-height:1;white-space:nowrap}.schedule-map-random{font-size:1.8em;line-height:1;color:#fff7e2}.schedule-map-team{max-width:45%;font-size:1.05em;overflow-wrap:anywhere;text-align:center;line-height:1.05}.schedule-map-content .schedule-map-winner{width:27%;height:100%;object-fit:contain}.schedule-map-status{font-size:.9em;font-weight:900;background:#001a2caa;padding:.3em .5em}.status-live{box-shadow:inset 0 0 0 2px #f3db3a}.status-live .schedule-map-status{color:#ffed60}
+@keyframes schedule-map-enter{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.schedule-total-row,.schedule-map-card,.schedule-map-photo,.schedule-map-content{animation:none}}
+
+/* User-uploaded KV: geometry is set by each overlay, without a required tournament image. */
+.schedule-total-heading{position:absolute;text-align:left;overflow:hidden}.schedule-total-heading h1{font-size:58px;line-height:1.1;margin:0;font-weight:900}.schedule-total-heading p{font-size:25px;line-height:1.2;margin:10px 0 0}
+.custom-total-table{gap:4px;background:transparent}
+.custom-total-table .schedule-total-row,.custom-total-columns{display:grid;grid-template-columns:7% 6% minmax(0,1fr) 14% 14% 10%;align-items:center;min-width:0;overflow:hidden}
+.custom-total-table .schedule-total-row{clip-path:none;color:var(--total-ink,#071b13)}
+.custom-total-table .schedule-total-row.podium{background:var(--total-highlight,#fff043)}
+.custom-total-table .schedule-total-row>b,.custom-total-table .schedule-total-row>strong{font-size:var(--total-font);padding-top:0;line-height:1.1}
+.custom-total-table .schedule-total-name{padding-left:8px;padding-right:24px}
+.custom-total-table .schedule-total-logo{width:var(--total-logo);height:var(--total-logo)}
+.custom-total-table .schedule-total-crown{right:39%;top:50%}
+.custom-total-columns{font-size:calc(var(--total-font)*.65);font-weight:900;background:var(--total-panel,#00bd87);color:white;line-height:1;text-align:center;padding:0}
+.score-schedule-maps{background:transparent}
+.schedule-map-card>header{height:min(24%,30px);background:linear-gradient(110deg,var(--map-accent,#00cbe9) 0%,var(--map-accent,#00cbe9) 90%,transparent 90.5%)}
+.schedule-map-content{top:min(25%,34px)}
+[data-map-layout="cards"] .schedule-map-content{flex-direction:column;gap:.6em;padding:.5em}
+[data-map-layout="cards"] .schedule-map-winner{width:45%;height:35%;max-height:180px}
+[data-map-layout="cards"] .schedule-map-team{max-width:95%}
+[data-map-layout="cards"] .schedule-map-random{font-size:2em}
+.configurable-map-overlay .kv-layer{width:1920px;height:1080px;max-width:none;object-fit:fill}
+.custom-map-title{position:absolute;left:75px;top:55px;width:1770px;font-size:64px;font-weight:900;color:var(--accent);line-height:1.15;text-align:center}
+.schedule-count-controls,.schedule-design-controls,.overlay-region-controls{padding:12px;margin:12px 0;border:1px solid #ffffff25;border-radius:7px;min-width:0}
+.schedule-count-controls label,.schedule-design-controls>label{display:block;font-size:12px;margin:8px 0}.schedule-count-controls select{display:block;width:100%;margin-top:6px}.schedule-count-controls p,.schedule-design-controls p{font-size:12px;line-height:1.6;color:#a8bac5}
+.schedule-design-controls input[type=checkbox]{width:16px;display:inline;margin-right:7px}.overlay-region-controls legend,.schedule-design-controls legend{font-size:12px;padding:0 5px}
+
+.schedule-map-card{color:inherit}.schedule-map-card>header{color:var(--map-header-ink,#fff)}.schedule-map-random{color:inherit}
+
+/* Keep animated table rows inside the table, apart from maps and KV art. */
+.schedule-total-table{overflow:hidden;contain:paint}.schedule-total-row>*{min-width:0;max-width:100%;overflow:hidden}.schedule-total-row>strong{white-space:nowrap;text-overflow:ellipsis}
+
+/* Uploaded flat KV stays visible; animated rows contain data only. */
+.schedule-total-overlay[data-row-artwork="data"] .schedule-total-row{background:transparent}

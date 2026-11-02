@@ -1,0 +1,342 @@
+{
+  "retrievedAt": "2026-10-27T00:49:22.804Z",
+  "search": {
+    "code": 0,
+    "status": "success",
+    "msg": "",
+    "data": {
+      "match_stats": [
+        {
+          "single_match_id": -1,
+          "match_id": "2109343903444019200",
+          "match_name": "",
+          "season_id": -1,
+          "event_id": -1,
+          "start_time": 1791741751,
+          "end_time": 1791742653,
+          "mode": 1
+        }
+      ],
+      "total_nums": 1,
+      "toast_message": ""
+    }
+  },
+  "payload": {
+    "status": "success",
+    "data": {
+      "match_info": [
+        {
+          "match_id": "2109343903444019200",
+          "mode": 1,
+          "match_name": "",
+          "number_of_team": 9,
+          "number_of_player": 36
+        }
+      ],
+      "team_stats": [
+        {
+          "match_id": "2109343903444019200",
+          "team_stats": [
+            {
+              "team_name": "MPE",
+              "player_data": [
+                {
+                  "player_id": 6392975323,
+                  "player_name": "Mquawn.011",
+                  "team_name": "MPE",
+                  "kills": 10,
+                  "damage": 4369
+                },
+                {
+                  "player_id": 451432517,
+                  "player_name": "NTN.mphuxyz?",
+                  "team_name": "MPE",
+                  "kills": 12,
+                  "damage": 7051
+                },
+                {
+                  "player_id": 130891197,
+                  "player_name": "Phướcbákhí-",
+                  "team_name": "MPE",
+                  "kills": 9,
+                  "damage": 3140
+                },
+                {
+                  "player_id": 1293465861,
+                  "player_name": "hoangdat.Zz",
+                  "team_name": "MPE",
+                  "kills": 5,
+                  "damage": 2933
+                }
+              ]
+            },
+            {
+              "team_name": "BEO ESP",
+              "player_data": [
+                {
+                  "player_id": 1341600404,
+                  "player_name": "OW.BéoVúThụt",
+                  "team_name": "BEO ESP",
+                  "kills": 4,
+                  "damage": 1509
+                },
+                {
+                  "player_id": 2619878134,
+                  "player_name": "cwlee9.ez",
+                  "team_name": "BEO ESP",
+                  "kills": 3,
+                  "damage": 1593
+                },
+                {
+                  "player_id": 2419901688,
+                  "player_name": "OW.VanNhat",
+                  "team_name": "BEO ESP",
+                  "kills": 2,
+                  "damage": 1982
+                },
+                {
+                  "player_id": 269678458,
+                  "player_name": "OW.Van Augur",
+                  "team_name": "BEO ESP",
+                  "kills": 3,
+                  "damage": 1720
+                }
+              ]
+            },
+            {
+              "team_name": "Meo Bính ESP",
+              "player_data": [
+                {
+                  "player_id": 3539351062,
+                  "player_name": "@17.meobinh",
+                  "team_name": "Meo Bính ESP",
+                  "kills": 5,
+                  "damage": 2811
+                },
+                {
+                  "player_id": 9435638121,
+                  "player_name": "i  CNϟ",
+                  "team_name": "Meo Bính ESP",
+                  "kills": 2,
+                  "damage": 950
+                },
+                {
+                  "player_id": 1732558007,
+                  "player_name": "Hong Hae-in.",
+                  "team_name": "Meo Bính ESP",
+                  "kills": 3,
+                  "damage": 2444
+                },
+                {
+                  "player_id": 6430717540,
+                  "player_name": "AOT丶Shasa捻",
+                  "team_name": "Meo Bính ESP",
+                  "kills": 1,
+                  "damage": 1464
+                }
+              ]
+            },
+            {
+              "team_name": "F ESP",
+              "player_data": [
+                {
+                  "player_id": 2549029844,
+                  "player_name": "AhChàngRauMá",
+                  "team_name": "F ESP",
+                  "kills": 6,
+                  "damage": 3068
+                },
+                {
+                  "player_id": 1295800354,
+                  "player_name": "FE.nglam༗",
+                  "team_name": "F ESP",
+                  "kills": 3,
+                  "damage": 1501
+                },
+                {
+                  "player_id": 1447995969,
+                  "player_name": "CP.rakuzanৎ",
+                  "team_name": "F ESP",
+                  "kills": 2,
+                  "damage": 2123
+                },
+                {
+                  "player_id": 158435100,
+                  "player_name": "Gray Bá Khí",
+                  "team_name": "F ESP",
+                  "kills": 5,
+                  "damage": 2498
+                }
+              ]
+            },
+            {
+              "team_name": "NEXFOURUS",
+              "player_data": [
+                {
+                  "player_id": 521334811,
+                  "player_name": "ChᴜộᴛSiᴍôVN",
+                  "team_name": "NEXFOURUS",
+                  "kills": 3,
+                  "damage": 1786
+                },
+                {
+                  "player_id": 715491204,
+                  "player_name": "HTE.ＰＢＨ´꒳`",
+                  "team_name": "NEXFOURUS",
+                  "kills": 0,
+                  "damage": 203
+                },
+                {
+                  "player_id": 5786278750,
+                  "player_name": "HTE. NgHieu༗",
+                  "team_name": "NEXFOURUS",
+                  "kills": 1,
+                  "damage": 895
+                },
+                {
+                  "player_id": 4898645619,
+                  "player_name": "HTE.Phuyyyyム",
+                  "team_name": "NEXFOURUS",
+                  "kills": 1,
+                  "damage": 879
+                }
+              ]
+            },
+            {
+              "team_name": "SA GLOBAL",
+              "player_data": [
+                {
+                  "player_id": 2284124731,
+                  "player_name": "b   toan",
+                  "team_name": "SA GLOBAL",
+                  "kills": 1,
+                  "damage": 468
+                },
+                {
+                  "player_id": 1868593299,
+                  "player_name": "N.TRÍ.07",
+                  "team_name": "SA GLOBAL",
+                  "kills": 2,
+                  "damage": 1095
+                },
+                {
+                  "player_id": 2135036019,
+                  "player_name": "BT丶ＮＩＮＯ╰‿╯",
+                  "team_name": "SA GLOBAL",
+                  "kills": 0,
+                  "damage": 639
+                },
+                {
+                  "player_id": 7326992213,
+                  "player_name": "_duyjunior@",
+                  "team_name": "SA GLOBAL",
+                  "kills": 4,
+                  "damage": 1303
+                }
+              ]
+            },
+            {
+              "team_name": "Tấn Huy ESP",
+              "player_data": [
+                {
+                  "player_id": 2140140154,
+                  "player_name": "dilambaby.",
+                  "team_name": "Tấn Huy ESP",
+                  "kills": 2,
+                  "damage": 1425
+                },
+                {
+                  "player_id": 7131783911,
+                  "player_name": "EmBonXạThủ",
+                  "team_name": "Tấn Huy ESP",
+                  "kills": 1,
+                  "damage": 569
+                },
+                {
+                  "player_id": 10713451536,
+                  "player_name": "tphat.hjhj",
+                  "team_name": "Tấn Huy ESP",
+                  "kills": 1,
+                  "damage": 890
+                },
+                {
+                  "player_id": 7996568489,
+                  "player_name": "Em Na౨ৎ.",
+                  "team_name": "Tấn Huy ESP",
+                  "kills": 1,
+                  "damage": 1413
+                }
+              ]
+            },
+            {
+              "team_name": "BAP",
+              "player_data": [
+                {
+                  "player_id": 7355136971,
+                  "player_name": "Miu9)6_8O2",
+                  "team_name": "BAP",
+                  "kills": 0,
+                  "damage": 115
+                },
+                {
+                  "player_id": 7908527356,
+                  "player_name": "@15.Ronaldo",
+                  "team_name": "BAP",
+                  "kills": 0,
+                  "damage": 50
+                },
+                {
+                  "player_id": 277696692,
+                  "player_name": "TKP✯Bảo",
+                  "team_name": "BAP",
+                  "kills": 1,
+                  "damage": 745
+                },
+                {
+                  "player_id": 1247826242,
+                  "player_name": "TSㅤJust•╰‿╯",
+                  "team_name": "BAP",
+                  "kills": 3,
+                  "damage": 2150
+                }
+              ]
+            },
+            {
+              "team_name": "HS",
+              "player_data": [
+                {
+                  "player_id": 2050106866,
+                  "player_name": "HS丶VănHuy",
+                  "team_name": "HS",
+                  "kills": 1,
+                  "damage": 1283
+                },
+                {
+                  "player_id": 8842854209,
+                  "player_name": "HS丶EKKOx7",
+                  "team_name": "HS",
+                  "kills": 2,
+                  "damage": 494
+                },
+                {
+                  "player_id": 43519360,
+                  "player_name": "HS丶XBAO",
+                  "team_name": "HS",
+                  "kills": 3,
+                  "damage": 1610
+                },
+                {
+                  "player_id": 1570174282,
+                  "player_name": "HS丶TuanKiet",
+                  "team_name": "HS",
+                  "kills": 0,
+                  "damage": 296
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

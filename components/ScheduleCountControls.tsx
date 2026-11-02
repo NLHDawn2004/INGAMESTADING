@@ -1,0 +1,9 @@
+'use client';
+import {changeMatchLimit,addMatch,type StudioState,type MatchLimit} from '../lib/state';
+import {scoreScheduleLayout} from '../lib/score-schedule';
+import {defaultMapRegion,type OverlayRegion} from '../lib/overlay-layout';
+export default function ScheduleCountControls({state,save,disabled,notify,region=state.theme.mapRegion??defaultMapRegion,mode='cards'}:{state:StudioState;save:(state:StudioState,action?:string)=>Promise<boolean>;disabled:boolean;notify:(message:string)=>void;region?:OverlayRegion;mode?:'cards'|'list'}){
+ const fit=scoreScheduleLayout(state.matches.length,region,mode);
+ async function apply(action:()=>StudioState){try{await save(action(),'Cập nhật số trận');}catch(error){notify((error as Error).message);}}
+ return <div className="schedule-count-controls"><label>Số trận dùng chung với lịch thi đấu<select aria-label="Số trận dùng chung" value={state.matchLimit} disabled={disabled} onChange={e=>void apply(()=>changeMatchLimit(state,e.target.value==='unlimited'?'unlimited':Number(e.target.value) as MatchLimit))}><option value="4">4 trận</option><option value="5">5 trận</option><option value="6">6 trận</option><option value="8">8 trận</option>{state.matchLimit===10&&<option value="10">10 trận đang có</option>}<option value="unlimited">Vô hạn trận</option></select></label>{state.matchLimit==='unlimited'&&<button type="button" className="button secondary" disabled={disabled||state.rushEnded||state.matches.length>=200} onClick={()=>void apply(()=>addMatch(state))}>Thêm trận</button>}<p>Hiện đủ {state.matches.length} trận trên cùng overlay. Năm map đầu chọn sẵn; từ trận 6 hiện RANDOM đến khi công bố.</p>{fit.crowded&&<p className="score-warning" role="alert">Vùng map hiện tại quá chật cho {state.matches.length} trận. Vẫn hiển thị đủ, không ẩn trận hay phân trang; hãy tăng vùng map trong KV.</p>}</div>;
+}

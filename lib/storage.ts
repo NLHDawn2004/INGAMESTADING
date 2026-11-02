@@ -1,0 +1,7 @@
+import { env } from 'cloudflare:workers';
+import { initialState, stateSchema, type StudioState } from './state';
+export async function record(){await env.DB!.prepare('INSERT OR IGNORE INTO studio (id,state,revision,history,overlay_token) VALUES (?,?,?,?,?)').bind('main',JSON.stringify(initialState()),0,'[]',crypto.randomUUID()+crypto.randomUUID()).run();return (await env.DB!.prepare('SELECT * FROM studio WHERE id=?').bind('main').first())!;}
+export async function readState(){const r=await record();return {state:stateSchema.parse(JSON.parse(r.state as string)),token:r.overlay_token as string};}
+export async function changeState(body:{state?:unknown;revision:number;action?:string}){const r=await record();if(body.revision!==r.revision)return {conflict:true};const history=JSON.parse(r.history as string) as StudioState[];let next:StudioState;
+if(body.action==='undo'){if(!history.length)throw new Error('Không có thao tác để hoàn tác.');next=stateSchema.parse(history.pop()!);}else {next=stateSchema.parse(body.state);if(body.action!=='live-player-stats'){history.push(JSON.parse(r.state as string));if(history.length>30)history.shift();}}
+next.revision=(r.revision as number)+1;const result=await env.DB!.prepare('UPDATE studio SET state=?,revision=?,history=? WHERE id=? AND revision=?').bind(JSON.stringify(next),next.revision,JSON.stringify(history),'main',r.revision).run();if(!result.meta.changes)return {conflict:true};return {state:next};}

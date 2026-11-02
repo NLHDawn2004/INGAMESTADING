@@ -1,0 +1,22 @@
+import {build} from 'esbuild';
+import {inject} from 'postject';
+import {readFile,writeFile,mkdir,copyFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+import {spawnSync} from 'node:child_process';
+
+if(process.platform!=='win32'||process.arch!=='x64')throw Error('Build the Windows x64 game connector using Windows x64 Node.js.');
+const root=fileURLToPath(new URL('..',import.meta.url));
+const stage=join(root,'outputs','game-connector-build');await mkdir(stage,{recursive:true});
+const readerPath=join(stage,'reader.mjs'),mainPath=join(stage,'main.cjs'),blobPath=join(stage,'sea.blob'),configPath=join(stage,'sea-config.json');
+await build({entryPoints:[join(root,'scripts','live-scoreboard-bridge.mjs')],outfile:readerPath,bundle:true,format:'esm',platform:'node',target:'node24',packages:'bundle',define:{'import.meta.url':'globalThis.__bridgeScriptUrl'}});
+await build({entryPoints:[join(root,'scripts','game-connector-main.mjs')],outfile:mainPath,bundle:true,format:'cjs',platform:'node',target:'node24',packages:'bundle'});
+await writeFile(configPath,JSON.stringify({main:mainPath,output:blobPath,disableExperimentalSEAWarning:true,useSnapshot:false,useCodeCache:false,execArgvExtension:'none',assets:{reader:readerPath,capture:join(root,'scripts','live-scoreboard-capture.ps1')}}));
+const prepared=spawnSync(process.execPath,['--experimental-sea-config',configPath],{cwd:root,stdio:'inherit',windowsHide:true});
+if(prepared.status!==0)throw Error('Could not prepare the executable: '+(prepared.error?.message||prepared.status));
+const output=join(root,'public','game-connector.exe');
+await copyFile(process.execPath,output);
+await inject(output,'NODE_SEA_BLOB',await readFile(blobPath),{sentinelFuse:'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2'});
+const check=spawnSync(output,['--self-test'],{encoding:'utf8',windowsHide:true});
+if(check.status!==0)throw Error('Standalone EXE failed verification: '+check.stderr);
+console.log(check.stdout.trim());console.log('Built public/game-connector.exe without private configuration.');

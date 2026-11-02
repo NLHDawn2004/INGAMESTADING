@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {mkdtemp,rm,readFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {localTeamLogos} from '../scripts/local-team-logos.ts';
+const originalCwd=process.cwd(),originalFetch=globalThis.fetch;const dir=await mkdtemp(join(tmpdir(),'ovl-logo-test-'));process.chdir(dir);
+let handler;let authorized=true;globalThis.fetch=async()=>new Response('',{status:authorized?200:401});
+localTeamLogos().configureServer({config:{server:{port:5183}},middlewares:{use(h){handler=h;}}});
+async function request(url,method='GET',body={},origin='http://localhost:5183'){let output;const headers={};const res={statusCode:200,setHeader(k,v){headers[k]=v;},end(v){output=v;}};const req={url,method,headers:{host:'localhost:5183',origin},async *[Symbol.asyncIterator](){yield JSON.stringify(body);}};await handler(req,res,()=>{throw Error('Unexpected next');});return {status:res.statusCode,headers,body:output};}
+try{authorized=false;assert.equal((await request('/api/local-team-logos','POST',{paths:[]})).status,401);authorized=true;assert.equal((await request('/api/local-team-logos','POST',{paths:[]},'http://evil.test')).status,403);assert.equal((await request('/local-team-logos/'+'a'.repeat(64))).status,404);assert.equal((await request('/api/local-team-logos','POST',{paths:['C:/secrets.txt']})).status,400);
+const path='E:\\FFSL17\\PLAYER\\YNX_DKHANG.png';const registered=await request('/api/local-team-logos','POST',{paths:[path]});assert.equal(registered.status,200);const url=JSON.parse(registered.body).logos[path];assert.match(url,/^\/local-team-logos\/[a-f0-9]{64}$/);const image=await request(url);assert.equal(image.status,200);assert.equal(image.headers['Content-Type'],'image/png');assert.deepEqual(image.body,await readFile(path));assert.equal((await request(url,'HEAD')).body,undefined);const persisted=JSON.parse(await readFile(join(dir,'.local-team-logos.json'),'utf8'));assert.equal(Object.keys(persisted).length,1);console.log('PASS: authentication, origin, unregistered image rejection, actual local PNG bytes, HEAD and persistent registry.');}finally{globalThis.fetch=originalFetch;process.chdir(originalCwd);await rm(dir,{recursive:true,force:true});}

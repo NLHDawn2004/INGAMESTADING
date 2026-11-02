@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {initialState,stateSchema} from '../lib/state.ts';
+import {emptyTeamList,listSnapshot,listLayout,teamListSchema,displayTeamName} from '../lib/team-list.ts';
+import {mergeTeams} from '../lib/team-import.ts';
+const initial=initialState(),legacy=JSON.parse(JSON.stringify(initial));delete legacy.teamList;
+assert.deepEqual(stateSchema.parse(legacy).teamList,emptyTeamList(),'Existing stored state gains safe defaults');
+const teams=Array.from({length:25},(_,i)=>({id:'t'+i,name:'ĐỘI '+i,abbreviation:'T'+i,logo:''}));
+const list=emptyTeamList();list.groups=[{id:'a',name:'BẢNG A',teamIds:teams.map(t=>t.id)}];list.selectedId='a';
+const snap=listSnapshot(list,teams);assert.equal(snap.teams.length,12);assert.equal(snap.pages,3);
+list.page=1;assert.equal(listSnapshot(list,teams).teams[0].id,'t12');list.page=2;assert.equal(listSnapshot(list,teams).teams.length,1);
+list.page=3;assert.throws(()=>listSnapshot(list,teams),/Trang/);list.page=0;
+list.design.title='Changed';teams[0].name='Changed';assert.equal(snap.design.title,'DANH SÁCH THI ĐẤU');assert.equal(snap.teams[0].name,'ĐỘI 0','On-air snapshots stay independent');
+assert.equal(displayTeamName(teams[0],{...list.design,nameMode:'short'}),'T0');
+assert.throws(()=>listSnapshot(list,teams.slice(1)),/bị xóa/);
+assert.equal(teamListSchema.safeParse({...list,groups:[{id:'a',name:'A',teamIds:['t1','t1']}]}).success,false);
+assert.equal(teamListSchema.safeParse({...list,design:{...list.design,kv:'https://bad.example/a.png'}}).success,false);
+for(const size of ['wide','square']){const l=listLayout(size);assert.equal(l.slots.length,12);for(const s of l.slots){assert.ok(s.x>=0&&s.y>=0&&s.x+s.width<=l.width&&s.y+s.height<=l.height);for(const r of [s.logo,s.name])assert.ok(r.x>=0&&r.y>=0&&r.x+r.width<=l.width&&r.y+r.height<=l.height);}assert.ok(existsSync(new URL('../public/teamlist-templates/gdhs11/card-11.png',import.meta.url)));}
+initial.teams=teams;initial.teamList=list;const merged=mergeTeams(initial,[{name:'NEW',abbreviation:'N',logo:''}],true);assert.ok(teams.every(t=>merged.teams.some(x=>x.id===t.id)),'Replacing roster preserves teams assigned to groups');
+const parsed=stateSchema.parse({...initial,teamList:{...list,published:snap}});assert.equal(parsed.teamList.published.groupName,'BẢNG A');
+const home=readFileSync(new URL('../components/StudioHome.tsx',import.meta.url),'utf8');assert.ok(home.includes("href:'/team-list'"));
+console.log('PASS: legacy state migration, 25 teams over 3 pages, ordered roster, stale-team rejection, unique membership, asset validation, immutable on-air snapshots, both layouts fit, assigned teams protected from replacement, home navigation.');

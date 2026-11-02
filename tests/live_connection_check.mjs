@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {canConnectLocalGame,connectLocalGame,gameConnectionPresentation} from '../lib/live-connection.ts';
+
+const origin='http://127.0.0.1:5183',token='test-resume-only-'.repeat(5);
+assert.equal(canConnectLocalGame(origin),true);assert.equal(canConnectLocalGame('http://localhost:5183'),true);
+assert.equal(canConnectLocalGame('http://192.168.100.29:5183'),false);assert.equal(canConnectLocalGame('https://localhost:5183'),false);
+let calls=[];
+const requestFor=(status,resume)=>async(url,options)=>{
+ calls.push({url:String(url),method:options?.method||'GET',body:options?.body});
+ if(String(url).endsWith('/status'))return Response.json({service:'overlay-studio-live-bridge',...status});
+ if(String(url).endsWith('/resume'))return resume();
+ if(url==='/api/live-scoreboard')return Response.json({token});
+ if(String(url).endsWith('/start'))return Response.json({ok:true});
+ throw Error('Unexpected request '+url);
+};
+let result=await connectLocalGame('http://192.168.100.29:5183',{allowPairing:true,request:async()=>{throw Error('Must not contact loopback from LAN');}});assert.equal(result.status,'unavailable');
+result=await connectLocalGame(origin,{request:requestFor({running:true,serverUrl:origin},()=>{throw Error('must not resume running reader');})});assert.equal(result.status,'running');assert.equal(calls.length,1);
+calls=[];result=await connectLocalGame(origin,{allowPairing:true,request:requestFor({running:true,serverUrl:'http://192.168.1.8:5183'},()=>{})});assert.equal(result.status,'other-server');assert.equal(calls.length,1);
+calls=[];result=await connectLocalGame(origin,{request:requestFor({running:false},()=>Response.json({ok:true}))});assert.equal(result.status,'resumed');assert.deepEqual(calls.map(x=>x.method),['GET','POST']);assert.ok(!calls.some(x=>x.url==='/api/live-scoreboard'),'resuming never rotates the key');
+calls=[];const missing=()=>Response.json({code:'pairing-required'},{status:409});result=await connectLocalGame(origin,{request:requestFor({running:false},missing)});assert.equal(result.status,'pairing-required');assert.equal(calls.length,2);
+calls=[];result=await connectLocalGame(origin,{allowPairing:true,request:requestFor({running:false},missing)});assert.equal(result.status,'paired');assert.equal(calls.filter(x=>x.url==='/api/live-scoreboard').length,1);assert.equal(JSON.parse(calls.at(-1).body).token,token);
+calls=[];result=await connectLocalGame(origin,{allowPairing:true,request:requestFor({running:false},()=>Response.json({code:'server-unavailable'},{status:503}))});assert.equal(result.status,'waiting');assert.equal(calls.length,2,'network trouble must not replace keys');
+calls=[];result=await connectLocalGame(origin,{allowPairing:true,request:requestFor({running:false},()=>Response.json({code:'other-server'},{status:409}))});assert.equal(result.status,'other-server');assert.equal(calls.length,2);
+result=await connectLocalGame(origin,{request:async()=>{throw Error('Host absent');}});assert.equal(result.status,'unavailable');
+const now=Date.now(),health={paired:true,lastSeenAt:now,sourceStatus:'waiting',message:'',receivedAt:0,sampleAt:0,diagnostic:null};
+assert.equal(gameConnectionPresentation(health,null,now).title,'Đã kết nối · chờ trận');
+assert.equal(gameConnectionPresentation({...health,sourceStatus:'source-error',message:'Chờ Player.log'},null,now).detail,'Chờ Player.log');
+assert.equal(gameConnectionPresentation({...health,sourceStatus:'identity-pending'},null,now).title,'Đang xác minh đội');
+assert.equal(gameConnectionPresentation({...health,sourceStatus:'source-stale'},null,now).connected,true);
+assert.equal(gameConnectionPresentation(health,null,now+6000).connected,false);
+assert.equal(gameConnectionPresentation(health,null,now,'Network offline').title,'Mất kết nối máy chủ');
+const packet={capturedAt:now,isReplay:false};const copy=JSON.stringify(packet);
+assert.equal(gameConnectionPresentation(health,packet,now).title,'LIVE');assert.equal(gameConnectionPresentation({...health,lastSeenAt:now+6000},packet,now+6000).title,'Dữ liệu chậm');assert.equal(JSON.stringify(packet),copy,'status presentation must never modify game data');
+console.log('PASS: automatic resume, no key rotation on reconnect/network errors, no LAN loopback calls, first pairing only when allowed, and separate transport/source/game-data status without changing packets.');

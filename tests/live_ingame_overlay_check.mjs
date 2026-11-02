@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('..',import.meta.url)),require=createRequire(new URL('../package.json',import.meta.url));
+const source=`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import Overlay from './components/LiveBoardOverlay';import {defaultLiveBoardSettings,livePacketSchema} from './lib/live-board';
+module.exports=()=>{const settings={...defaultLiveBoardSettings(),enabled:true};const packet=livePacketSchema.parse({sessionId:crypto.randomUUID(),configId:settings.configId,sequence:1,matchId:'42',detectedMatchId:'42',source:'game-log',isReplay:false,capturedAt:Date.now(),expectedTeams:1,complete:true,teams:[{teamId:'1',teamName:'TEAM TEST',elims:2,aliveCount:null,aliveStates:['alive','knocked','dead','unknown']}]});return {live:renderToStaticMarkup(<Overlay settings={settings} packet={packet} teams={[]}/>),stale:renderToStaticMarkup(<Overlay settings={settings} packet={packet} teams={[]} ageMs={6000}/>),ocr:renderToStaticMarkup(<Overlay settings={settings} packet={{...packet,source:'windows-ocr',teams:[{...packet.teams[0],aliveCount:3,aliveStates:null}]}} teams={[]}/>)};};`;
+const out=await require('esbuild').build({stdin:{contents:source,resolveDir:root,loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs',packages:'external',jsx:'automatic'});const m={exports:{}};new Function('require','module','exports',out.outputFiles[0].text)(require,m,m.exports);const html=m.exports();
+for(const state of ['alive','knocked','dead'])assert.ok(html.live.includes('live-board-alive-bar '+state),state);
+assert.ok(html.live.includes('TEAM TEST'));assert.ok(!html.live.includes('MATCH 42'));assert.ok(html.stale.includes('NGUỒN CHẬM'));assert.ok(html.ocr.includes('live-board-value aliveCount'));assert.ok(!html.ocr.includes('live-board-alive-bar'));
+console.log('PASS: native OVL overlay renders four ALIVE states, team/match, stale-source label, and numeric OCR fallback.');

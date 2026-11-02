@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readUploadResponse} from '../lib/upload-response.ts';
+await assert.rejects(()=>readUploadResponse(new Response('Payload Too Large',{status:413})),/quá lớn/);
+await assert.rejects(()=>readUploadResponse(new Response('<html>proxy error</html>',{status:502})),/HTTP 502/);
+await assert.rejects(()=>readUploadResponse(Response.json({error:'Ảnh không hợp lệ.'},{status:400})),/Ảnh không hợp lệ/);
+await assert.rejects(()=>readUploadResponse(new Response('Forbidden',{status:401})),/đăng nhập/);
+await assert.rejects(()=>readUploadResponse(new Response('OK',{status:200})),/không hợp lệ/);
+await assert.rejects(()=>readUploadResponse(Response.json({url:'https://untrusted.test/file.png'})),/không hợp lệ/);
+assert.equal(await readUploadResponse(Response.json({url:'/api/media/abcd-1234'})),'/api/media/abcd-1234');
+console.log('PASS: plain-text 413, proxy HTML, JSON errors, expired login, malformed success, invalid media URLs and valid uploads.');

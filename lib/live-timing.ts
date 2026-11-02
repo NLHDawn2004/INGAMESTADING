@@ -1,0 +1,4 @@
+export const LIVE_POLL_MS=1000;
+export const LIVE_SOURCE_BUDGET_MS=3000;
+export const PLAYER_OVERLAY_POLL_MS=500;
+export const SOURCE_WARNING_MS=5000;

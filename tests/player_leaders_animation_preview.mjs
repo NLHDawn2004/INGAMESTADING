@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('..',import.meta.url));
+const stage=root+'/outputs/player-leaders-animation';mkdirSync(stage,{recursive:true});
+const require=createRequire(root+'/package.json');
+const entry=`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import LeaderOverlay from './components/LeaderOverlay';import {demoLeaderSnapshot,videoLeaderDesign} from './lib/player-leaders';
+function App(){const [elims,E]=useState({...demoLeaderSnapshot(),design:videoLeaderDesign('elims')}),[damage,D]=useState({...demoLeaderSnapshot(),design:videoLeaderDesign('damage')});window.qa=(action)=>{if(action==='connected')E(s=>({...s,design:{...s.design,background:'/api/media/test.png'}}));if(action==='hide')E(s=>({...s,onAir:false}));if(action==='show')E(s=>({...s,onAir:true,publishedAt:s.publishedAt+1}));if(action==='update')E(s=>({...s,players:s.players.map((p,i)=>({...p,kills:i===5?999:p.kills}))}));};return <><div id="elims"><LeaderOverlay kind="elims" data={elims}/></div><div id="damage"><LeaderOverlay kind="damage" data={damage}/></div></>};createRoot(document.getElementById('root')).render(<App/>);`;
+const out=await require('esbuild').build({stdin:{contents:entry,resolveDir:root,loader:'tsx'},bundle:true,write:false,platform:'browser',format:'iife',jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'}});
+writeFileSync(stage+'/qa.html','<!doctype html><meta charset="utf-8"><base href="http://127.0.0.1:5183/"><style>body{margin:0;background:#192b36}'+readFileSync(root+'/app/player-leaders.css','utf8')+'</style><div id="root"></div><script>'+out.outputFiles[0].text.replaceAll('</script','<\\/script')+'</script>');
+console.log('Prepared isolated animation QA; no tournament data modified.');

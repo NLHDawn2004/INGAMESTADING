@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {initialState,stateSchema} from '../lib/state.ts';
+import {teamLogoSchema,logoPath} from '../lib/team-assets.ts';
+import {createId} from '../lib/client-id.ts';
+import {newScoreBoard,commitImport,scoreBoardSchema} from '../lib/scoreboard.ts';
+const old=initialState();old.teams=[{id:'legacy',name:'Old team',logo:'/api/media/abcdef-1234'}];
+const normalizedOld={...old,teams:old.teams.map(team=>({...team,name:team.name.toUpperCase()}))};
+assert.deepEqual(stateSchema.parse(old),normalizedOld,'Preserve legacy fields while applying the existing uppercase team-name rule');
+const {liveBoard:unused,...beforeLiveBoard}=normalizedOld;
+assert.deepEqual(stateSchema.parse(beforeLiveBoard),normalizedOld,'Legacy state missing liveBoard must receive stable defaults');
+const team={id:'qa-team',name:'TEAM A',abbreviation:'TA',logo:'/logos/Team A.png'};
+const current={...old,teams:[...old.teams,team]};assert.deepEqual(stateSchema.parse(current),{...current,teams:[...normalizedOld.teams,team]});
+assert.equal(logoPath('C:/OVL LỊCH TRÌNH THI ĐẤU/public/logos/Team A.png'),team.logo);
+assert.equal(logoPath('logos/nhóm/logo.webp'),'/logos/nhóm/logo.webp');
+for(const value of ['/logos/../secret.png','/logos/a.svg','C:/other/logo.png','file:///C:/logo.png','https://other/logo.png'])assert.equal(teamLogoSchema.safeParse(value).success,false);
+const board=newScoreBoard('QA');const match={id:'1989692635121453056',name:'QA',rows:[{externalKey:'a',name:'TEAM A',rank:1,kills:3,booyah:1,sourcePoints:15,rankVerified:true}],startTime:0,endTime:0,source:'matchstats'};
+const imported=commitImport(board,match,board.stages[0].id,{a:team.id},current.teams);
+assert.equal(scoreBoardSchema.parse(imported).teams.find(t=>t.id===team.id).logo,team.logo);
+const original=crypto.randomUUID;try{Object.defineProperty(crypto,'randomUUID',{value:undefined,configurable:true});const ids=new Set(Array.from({length:100},()=>createId()));assert.equal(ids.size,100);for(const id of ids)assert.match(id,/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);}finally{Object.defineProperty(crypto,'randomUUID',{value:original,configurable:true});}
+console.log('PASS: legacy state defaults, existing name normalization, shared team fields, local logo paths, invalid path rejection, scoreboard import and HTTP LAN ID fallback.');

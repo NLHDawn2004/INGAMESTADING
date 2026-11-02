@@ -1,0 +1,212 @@
+{
+  "status": "success",
+  "data": {
+    "match_info": [
+      {
+        "match_id": "1989692635121453056",
+        "mode": 1,
+        "match_name": "",
+        "number_of_team": 12
+      }
+    ],
+    "team_stats": [
+      {
+        "match_id": "1989692635121453056",
+        "team_stats": [
+          {
+            "team_id": 151962,
+            "team_name": "BRU",
+            "match_rank": 1,
+            "ranking_score": 12,
+            "survival_score": 12,
+            "kills": 9,
+            "booyah": 1,
+            "total_score": 21,
+            "teammate_list": [
+              10001100,
+              10001102,
+              10001101,
+              10001103
+            ]
+          },
+          {
+            "team_id": 151966,
+            "team_name": "AG",
+            "match_rank": 2,
+            "ranking_score": 9,
+            "survival_score": 9,
+            "kills": 9,
+            "booyah": 0,
+            "total_score": 18,
+            "teammate_list": [
+              10001105,
+              10001106,
+              10001107,
+              10001108
+            ]
+          },
+          {
+            "team_id": 151972,
+            "team_name": "R7",
+            "match_rank": 3,
+            "ranking_score": 7,
+            "survival_score": 7,
+            "kills": 9,
+            "booyah": 0,
+            "total_score": 16,
+            "teammate_list": [
+              10001083,
+              10001080,
+              10001081,
+              10001082
+            ]
+          },
+          {
+            "team_id": 121963,
+            "team_name": "RRQ",
+            "match_rank": 4,
+            "ranking_score": 8,
+            "survival_score": 8,
+            "kills": 6,
+            "booyah": 0,
+            "total_score": 14,
+            "teammate_list": [
+              10001092,
+              10001091,
+              10001090,
+              10001093
+            ]
+          },
+          {
+            "team_id": 151965,
+            "team_name": "TS",
+            "match_rank": 5,
+            "ranking_score": 5,
+            "survival_score": 5,
+            "kills": 8,
+            "booyah": 0,
+            "total_score": 13,
+            "teammate_list": [
+              10001127,
+              10001124,
+              10001126,
+              10001128
+            ]
+          },
+          {
+            "team_id": 151961,
+            "team_name": "FX",
+            "match_rank": 5,
+            "ranking_score": 6,
+            "survival_score": 6,
+            "kills": 7,
+            "booyah": 0,
+            "total_score": 13,
+            "teammate_list": [
+              10001119,
+              10001120,
+              10001122,
+              10001121
+            ]
+          },
+          {
+            "team_id": 151967,
+            "team_name": "GOW",
+            "match_rank": 6,
+            "ranking_score": 4,
+            "survival_score": 4,
+            "kills": 3,
+            "booyah": 0,
+            "total_score": 7,
+            "teammate_list": [
+              10001149,
+              10001151,
+              10001152,
+              10001150
+            ]
+          },
+          {
+            "team_id": 121964,
+            "team_name": "EVOS",
+            "match_rank": 7,
+            "ranking_score": 1,
+            "survival_score": 1,
+            "kills": 5,
+            "booyah": 0,
+            "total_score": 6,
+            "teammate_list": [
+              10001074,
+              10001078,
+              10001075,
+              10001079
+            ]
+          },
+          {
+            "team_id": 151969,
+            "team_name": "PE",
+            "match_rank": 8,
+            "ranking_score": 0,
+            "survival_score": 0,
+            "kills": 5,
+            "booyah": 0,
+            "total_score": 5,
+            "teammate_list": [
+              10001135,
+              10001136,
+              10001134,
+              10001137
+            ]
+          },
+          {
+            "team_id": 151968,
+            "team_name": "FLCN",
+            "match_rank": 9,
+            "ranking_score": 2,
+            "survival_score": 2,
+            "kills": 2,
+            "booyah": 0,
+            "total_score": 4,
+            "teammate_list": [
+              10001099,
+              10001095,
+              10001097,
+              10001098
+            ]
+          },
+          {
+            "team_id": 151964,
+            "team_name": "E1",
+            "match_rank": 9,
+            "ranking_score": 3,
+            "survival_score": 3,
+            "kills": 1,
+            "booyah": 0,
+            "total_score": 4,
+            "teammate_list": [
+              10001131,
+              10001129,
+              10001130,
+              10001132
+            ]
+          },
+          {
+            "team_id": 151963,
+            "team_name": "HEV",
+            "match_rank": 10,
+            "ranking_score": 0,
+            "survival_score": 0,
+            "kills": 3,
+            "booyah": 0,
+            "total_score": 3,
+            "teammate_list": [
+              10001147,
+              10001146,
+              10001145,
+              10001144
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

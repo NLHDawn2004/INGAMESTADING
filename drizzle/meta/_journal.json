@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791584945693,
+      "tag": "0000_gray_eternity",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791590485537,
+      "tag": "0001_purple_colossus",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793070793627,
+      "tag": "0002_live_scoreboard_bridge",
+      "breakpoints": true
+    }
+  ]
+}

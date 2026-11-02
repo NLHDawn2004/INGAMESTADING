@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {DOMParser} from '@xmldom/xmldom';
+import {zipSync,strToU8} from 'fflate';
+import {teamsFromRows,xlsxRows,parseCsv,mergeTeams} from '../lib/team-import.ts';
+import {initialState,stateSchema} from '../lib/state.ts';
+globalThis.DOMParser=class {parseFromString(...args){const doc=new DOMParser().parseFromString(...args);doc.querySelector=name=>doc.getElementsByTagName(name)[0]||null;return doc;}};
+const sample=process.argv[2];
+if(sample){const rows=teamsFromRows(xlsxRows(new Uint8Array(readFileSync(sample))));assert.equal(rows.length,12);assert.deepEqual(rows[0],{name:'COPPERX',abbreviation:'CPX',logo:'E:\\FFSL17\\PLAYER\\YNX_DKHANG.png'});assert.equal(rows[11].name,'VICTORY');for(const row of rows)assert.ok(existsSync(row.logo),'Missing logo: '+row.logo);console.log('PASS: actual XLSX sample, all 12 teams and logo files.');}
+const zip=zipSync({'xl/workbook.xml':strToU8('<workbook xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet r:id="rId1"/></sheets></workbook>'),'xl/_rels/workbook.xml.rels':strToU8('<Relationships><Relationship Id="rId1" Target="worksheets/sheet2.xml"/></Relationships>'),'xl/worksheets/sheet2.xml':strToU8('<worksheet><sheetData><row><c r="A1" t="inlineStr"><is><t>TÊN TEAM</t></is></c><c r="B1" t="inlineStr"><is><t>LINK LOGO</t></is></c><c r="C1" t="inlineStr"><is><t>TÊN VIẾT TẮT</t></is></c></row><row><c r="A2" t="inlineStr"><is><t>Đội Một</t></is></c><c r="C2" t="inlineStr"><is><t>DM</t></is></c></row></sheetData></worksheet>')});
+assert.deepEqual(teamsFromRows(xlsxRows(zip)),[{name:'ĐỘI MỘT',abbreviation:'DM',logo:''}]);
+const rows=teamsFromRows(parseCsv('﻿ TÊN VIẾT TẮT,TÊN TEAM,LINK LOGO\r\nCPX,"COPPERX, ESP",/logos/a.png\r\n'));
+assert.equal(rows[0].name,'COPPERX, ESP');assert.equal(teamsFromRows(parseCsv('TÊN TEAM;TÊN VIẾT TẮT;LINK LOGO\nTeam A;TA;'))[0].logo,'');
+assert.throws(()=>teamsFromRows([['TÊN TEAM','TÊN VIẾT TẮT','LINK LOGO'],['A','AA',''],['B','aa','']]),/trùng/);
+assert.throws(()=>parseCsv('"unfinished'),/chưa đóng/);assert.throws(()=>teamsFromRows([['bad']]),/cột/);
+const s=initialState();s.teams=[{id:'a',name:'A',abbreviation:'AA',logo:''},{id:'used',name:'Used',logo:''},{id:'unused',name:'Unused',logo:''}];s.matches[0]={...s.matches[0],status:'finished',winner:'used'};
+const next=mergeTeams(s,[{name:'A renamed',abbreviation:'AA',logo:'/local-team-logos/'+'a'.repeat(64)}],true);assert.equal(next.teams[0].id,'a');assert.deepEqual(next.teams.map(t=>t.id),['a','used']);stateSchema.parse(next);assert.equal(s.teams.length,3);
+assert.equal(mergeTeams(s,[{name:'B',abbreviation:'BB',logo:''}],false).teams.length,4);
+assert.throws(()=>mergeTeams(s,[{name:'Used',abbreviation:'AA',logo:''}],false),/hai đội/);
+console.log('PASS: XLSX inline cells, reordered columns, CSV quotes/BOM/semicolon, duplicate rejection, stable IDs, protected results and state validation.');

@@ -1,0 +1,59 @@
+.live-board-studio{display:grid;grid-template-columns:minmax(400px,1fr) minmax(340px,1fr);gap:24px;max-width:1700px;margin:auto;padding:24px}.live-board-controls{padding:24px;min-width:0}.live-board-controls h1{font-size:25px}.live-board-controls h2{font-size:17px;margin:25px 0 12px}.live-board-controls p,.live-board-preview-column p{font-size:12px;line-height:1.7;color:#a0abb9}.live-board-controls label{display:block;font-size:12px;margin:10px 0;color:#b8c2ce}.live-board-controls input,.live-board-controls select{display:block;width:100%;margin-top:6px}.live-board-controls input[type=file]{font-size:11px}.live-board-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 14px}.live-board-controls .live-board-check{display:flex;gap:9px;align-items:flex-start}.live-board-check input{width:16px!important;margin:2px 0!important;flex:none}.live-board-checks{display:flex;gap:6px 15px;flex-wrap:wrap}.live-board-health{display:flex;flex-direction:column;gap:7px;padding:14px;background:#18232e;border:1px solid #344252;border-radius:8px;font-size:12px}.live-board-preview-column{min-width:0;align-self:start;position:sticky;top:20px}.live-board-preview-column h2{font-size:17px;margin-bottom:15px}.live-board-controls details{padding:14px;margin:12px 0;border:1px solid #ffffff20;border-radius:8px}.live-board-controls summary{cursor:pointer;font-size:12px;font-weight:bold}.live-board-controls table{width:100%;font-size:12px;border-collapse:collapse}.live-board-controls th,.live-board-controls td{text-align:left;padding:7px;border-bottom:1px solid #ffffff15}.live-board-controls small{display:block;font-size:11px;margin-top:6px;color:#a0abb9}.live-board-controls p{overflow-wrap:anywhere}
+.live-board-overlay{position:relative;width:1920px;height:1080px;background:transparent;overflow:hidden;font-family:'GFF Latin','GFF VN',Arial,sans-serif}.live-board-kv{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.live-board-table{position:absolute;display:flex;flex-direction:column}.live-board-title{display:flex;justify-content:space-between;align-items:center;font-size:34px;margin-bottom:10px}.live-board-title span{font-size:16px}.live-board-table header,.live-board-table article{display:grid;align-items:center;gap:16px;padding:8px 18px;background:#0c1727dd}.live-board-table header{font-size:17px;font-weight:bold;background:#172d45ed}.live-board-table.with-kv header,.live-board-table.with-kv article{background:transparent}.live-board-team{display:flex;align-items:center;gap:16px;min-width:0}.live-board-team img{height:1.5em;width:1.5em;object-fit:contain;flex:none}.live-board-team b{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.live-board-value{font-variant-numeric:tabular-nums}.live-board-source-label{font-size:16px;color:#ffd273;font-weight:800;margin-bottom:5px}
+@media(max-width:1100px){.live-board-studio{grid-template-columns:1fr}.live-board-preview-column{position:static;grid-row:1}.live-board-controls{padding:16px}}@media(max-width:540px){.live-board-studio{padding:12px}.live-board-form{grid-template-columns:1fr}.live-board-studio .button{font-size:11px}}
+
+.live-board-alive{display:flex;align-items:center;gap:5px;min-height:1em}.live-board-alive-bar{display:block;width:.24em;height:1.05em;background:#000;border:1px solid #596575}.live-board-alive-bar.unknown{background:repeating-linear-gradient(45deg,#637085 0 3px,#273140 3px 6px);border-color:#8795a8}
+
+.live-board-aligned-row{position:absolute;display:block;background:transparent}.live-board-aligned-cell{position:absolute;top:0;height:100%;display:flex;align-items:center;min-width:0}.live-board-aligned-cell.teamName .live-board-team{width:100%}.live-board-aligned-cell .live-board-team img{max-height:90%}.live-board-aligned-cell .live-board-alive{justify-content:flex-start}.live-board-aligned-cell .live-board-value{width:100%;text-align:center}
+
+.live-board-aligned-logo{position:absolute;top:50%;transform:translateY(-50%);object-fit:contain}.live-board-aligned-cell.teamName .live-board-team img{display:none}
+
+
+
+/* ALIVE: sống/hồi sinh vàng; gục cam; chết vàng sẫm. */
+
+
+.live-board-compact-rank{position:absolute;left:3px;top:0;width:68px;height:100%;display:flex;align-items:center;justify-content:center;font-size:.78em;color:#fff2d3;font-style:italic}.live-board-animated-row.eliminated{filter:grayscale(1)}.live-board-animated-row.eliminated>*{opacity:.38}.live-board-animated-row.eliminated::before,.live-board-animated-row.eliminated::after{display:none}
+
+/* One palette: alive yellow, downed orange, eliminated gray. */
+.live-board-alive-bar.alive{background:#f5cf4a;border-color:#f5cf4a}.live-board-alive-bar.knocked{background:#c84925;border-color:#c84925}.live-board-alive-bar.dead{background:#747b86;border-color:#9299a3}
+
+.live-board-value.total{font-variant-numeric:tabular-nums;font-size:.85em;font-weight:800;white-space:nowrap}
+
+
+
+/* Match the scoreboard overlays: entire rows reveal once, 250 ms apart. */
+.live-board-animated-row{isolation:isolate}
+.live-board-animated-row:not([data-live-entered]){animation:score-row-enter .5s ease-out var(--row-delay,250ms) 1 both}
+.live-board-table>.live-board-animated-row{position:relative}
+[data-row-style="separated"] .live-board-animated-row:not([data-live-entered]){animation-name:score-row-slide}
+.live-board-animated-row{overflow:hidden}
+.live-board-animated-row::before,.live-board-animated-row::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:0}
+.live-board-leader::before{opacity:1;background:linear-gradient(90deg,#f5cf4a38,#f5cf4a08 70%,transparent);box-shadow:inset 3px 0 #ffe393,inset 0 0 0 1px #f5cf4a70}
+.live-board-leader::after{opacity:1;background:linear-gradient(110deg,transparent 25%,#ffe9a126 48%,transparent 65%);background-size:240% 100%;animation:live-board-leader-shine 3.6s ease-in-out infinite}
+.live-board-leader .total,.live-board-leader .live-board-compact-rank{color:#ffe393;text-shadow:0 0 12px #ffc93c80}
+@keyframes live-board-leader-shine{0%,15%{background-position:160% 0}85%,100%{background-position:-80% 0}}
+@media(prefers-reduced-motion:reduce){.live-board-animated-row:not([data-live-entered]),.live-board-leader::after{animation:none}}
+
+/* Compact live scoreboard controls. */
+@media(min-width:1101px){.live-board-studio{grid-template-columns:minmax(360px,440px) minmax(0,1fr)}}
+.live-board-control-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.live-board-control-heading h1{font-size:20px;margin:0}.live-board-disclosure-actions{display:flex;gap:10px;flex-wrap:wrap}.live-board-disclosure-actions button{border:0;background:transparent;color:#b8c2ce;font-size:11px;padding:4px 0;cursor:pointer}.live-board-disclosure-actions button:hover{color:#fff}.live-board-disclosure-actions button:focus-visible{outline:2px solid #ffd273;outline-offset:3px}.live-board-controls .live-board-health{flex-direction:row;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:10px 12px}.live-board-controls .live-board-primary-actions{gap:8px;margin:14px 0}.live-board-primary-actions .button{font-size:11px;padding:9px 12px;flex:1}.live-board-controls details.live-board-control-section{padding:0;margin:8px 0;overflow:hidden}.live-board-control-section>summary{padding:13px 14px;user-select:none}.live-board-control-section[open]>summary{border-bottom:1px solid #ffffff15;margin-bottom:12px}.live-board-control-section[open]{padding:0 14px 14px!important}.live-board-control-section[open]>summary{margin-left:-14px;margin-right:-14px}.live-board-control-section fieldset{min-width:0;border:1px solid #ffffff20;border-radius:6px;padding:10px}.live-board-control-section legend{font-size:12px;padding:0 5px}.live-board-control-section .button{font-size:11px}.live-board-controls .loading-banner{font-size:12px}.live-board-controls .live-board-control-section label:last-child{margin-bottom:0}
+
+/* Neon KV: 14 teams, PTS / ELIMS / ALIVE. */
+.live-board-overlay[data-kv-theme="neon"] .live-board-compact-rank{width:56px;color:#ffffff;text-shadow:none}
+.live-board-overlay[data-kv-theme="neon"] .live-board-value.total,.live-board-overlay[data-kv-theme="neon"] .live-board-value.elims{color:#14285f;font-weight:900;text-shadow:none}
+.live-board-overlay[data-kv-theme="neon"] .live-board-alive-bar{border-color:#14285f;box-shadow:0 0 0 1px #14285f33}
+
+.live-board-overlay[data-kv-theme="neon"] .live-board-leader::before,.live-board-overlay[data-kv-theme="neon"] .live-board-leader::after{display:none}
+
+/* Keep logo and Champion Rush icons in fixed columns, independent of name length. */
+.live-board-team{width:100%}.live-board-logo{display:flex;align-items:center;justify-content:center;width:1.5em;height:1.5em;flex:none}.live-board-team b{flex:1;min-width:0}.live-board-crown{display:flex;align-items:center;justify-content:center;width:1em;max-width:30px;flex:none}.live-board-aligned-cell.teamName .live-board-logo{display:none}.live-board-aligned-cell.teamName .live-board-team{gap:6px}.live-board-alive-bar{flex-shrink:0}
+/* Header and legend enter with the row artwork; legend follows the last team. */
+.live-board-chrome{animation:score-row-slide .5s ease-out var(--row-delay,0ms) 1 both;pointer-events:none}
+.live-board-footer-art{transition:top .65s cubic-bezier(.16,1,.3,1)}
+.live-board-table>.live-board-title,.live-board-table>header{animation:score-row-enter .5s ease-out 1 both}
+@media(prefers-reduced-motion:reduce){.live-board-chrome,.live-board-table>.live-board-title,.live-board-table>header{animation:none}.live-board-footer-art{transition:none}}
+
+.live-board-table{overflow:hidden}.live-board-aligned-cell{overflow:hidden}.live-board-aligned-row{overflow:hidden}
+
+.live-board-overlay[data-row-artwork="data"] .live-board-leader::before,.live-board-overlay[data-row-artwork="data"] .live-board-leader::after{display:none}

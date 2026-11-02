@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {DOMParser} from '@xmldom/xmldom';
+import {xlsxRows} from '../lib/team-import.ts';
+import {importTeamListRows} from '../lib/team-list-import.ts';
+import {emptyTeamList} from '../lib/team-list.ts';
+import {initialState,stateSchema} from '../lib/state.ts';
+globalThis.DOMParser=class{parseFromString(...args){const doc=new DOMParser().parseFromString(...args);doc.querySelector=name=>doc.getElementsByTagName(name)[0]||null;return doc;}};
+const registered=[{id:'existing',name:'Đội Một',abbreviation:'DM',logo:'/logos/one.png'}],list=emptyTeamList();
+const result=importTeamListRows(list,registered,[['Bảng','tên team'],['Chung Kết','DM'],['','Đội Hai'],['','Đội Ba']]);
+assert.equal(result.groupCount,1);assert.equal(result.added,2);assert.equal(result.teams.length,3);assert.deepEqual(result.list.groups[0].teamIds,result.teams.map(t=>t.id));assert.equal(result.teams[0].logo,'/logos/one.png');assert.equal(list.groups.length,0);assert.equal(registered.length,1);
+const repeat=importTeamListRows(result.list,result.teams,[['Bảng','Tên Team'],['Chung Kết','Đội Hai'],['','DM']]);assert.equal(repeat.added,0);assert.equal(repeat.list.groups.length,1);assert.deepEqual(repeat.list.groups[0].teamIds,[result.teams[1].id,'existing']);
+const multiple=importTeamListRows(list,[],[['Bảng','Tên Đội'],['A','Một'],['','Hai'],['B','Ba'],['','Bốn']]);assert.equal(multiple.groupCount,2);assert.deepEqual(multiple.list.groups.map(g=>g.teamIds.length),[2,2]);
+assert.throws(()=>importTeamListRows(list,[],[['Bảng','Tên Team'],['','Missing Group']]),/chưa có tên bảng/);
+assert.throws(()=>importTeamListRows(list,registered,[['Bảng','Tên Team'],['A','DM'],['','Đội Một']]),/trùng đội/);
+assert.throws(()=>importTeamListRows(list,[...registered,{id:'other',name:'DM',logo:''}],[['Bảng','Tên Team'],['A','DM']]),/nhiều đội/);
+assert.throws(()=>importTeamListRows(list,[],[['Bảng','Tên Team'],['A','X'.repeat(81)]]),/80 ký tự/);
+stateSchema.parse({...initialState(),teams:result.teams,teamList:result.list});
+if(process.argv[2]){const rows=xlsxRows(new Uint8Array(readFileSync(process.argv[2]))),actual=importTeamListRows(emptyTeamList(),[],rows);assert.equal(actual.groupCount,1);assert.equal(actual.list.groups[0].name,'Chung Kết');assert.equal(actual.teamCount,12);assert.equal(actual.added,12);assert.equal(actual.teams[0].name,'THUONG LAM ESP');assert.equal(actual.teams[11].name,'CBL');stateSchema.parse({...initialState(),teams:actual.teams,teamList:actual.list});console.log('PASS actual XLSX: merged A2:A13, Chung Kết, all 12 names in original order; unknown teams created and state valid.');}
+console.log('PASS: merged/blank group labels, multiple groups, existing names/abbreviations/logos preserved, stable IDs on reimport, new-team creation, ambiguous/duplicate/missing/oversize errors, immutable inputs.');

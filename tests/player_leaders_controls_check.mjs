@@ -1,0 +1,97 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readFileSync,writeFileSync,mkdirSync,mkdtempSync,existsSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {createServer} from 'node:http';
+import {spawn} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('..',import.meta.url));
+const require=createRequire(root+'/package.json');
+const entry=`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';
+import Studio from './components/PlayerLeadersStudio';import Leader from './components/LeaderOverlay';
+import {initialState} from './lib/state';import {demoLeaderSnapshot,videoLeaderDesign} from './lib/player-leaders';
+const initial=initialState();initial.playerOverlays={designs:{elims:videoLeaderDesign('elims'),damage:videoLeaderDesign('damage')},elims:{...demoLeaderSnapshot(),onAir:false,design:videoLeaderDesign('elims')},damage:{...demoLeaderSnapshot(),onAir:false,design:videoLeaderDesign('damage')}};
+function App(){const [state,S]=useState(initial);window.qaState=state;window.qaReady=true;
+const save=async next=>{const fresh=structuredClone(next);fresh.revision++;S(fresh);return true;};
+window.qa=action=>{if(action==='refresh')save(state);if(action==='stats')save({...state,playerOverlays:{...state.playerOverlays,elims:{...state.playerOverlays.elims,players:state.playerOverlays.elims.players.map(p=>({...p,kills:777}))}}});};
+return <><div id="elims"><Leader kind="elims" data={state.playerOverlays.elims}/></div><div id="damage"><Leader kind="damage" data={state.playerOverlays.damage}/></div><div id="studio"><Studio state={state} save={save} loaded={true} busy={false} notify={()=>{}} overlayURL="http://127.0.0.1:5183/overlay?token=qa"/></div></>}
+createRoot(document.getElementById('root')).render(<App/>);`;
+const built=require('esbuild').buildSync({stdin:{contents:entry,resolveDir:root,loader:'tsx'},bundle:true,write:false,platform:'browser',format:'iife',jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'}});
+const css=['globals.css','player-leaders.css','live-board.css'].map(p=>readFileSync(root+'/app/'+p,'utf8').replaceAll(/@import[^;]+;/g,'')).join('\n');
+const preflight=readFileSync(root+'/node_modules/tailwindcss/preflight.css','utf8');
+const html='<!doctype html><meta charset="utf-8"><style>@layer base{'+preflight+'}'+css+'</style><div id="root"></div><script>'+built.outputFiles[0].text.replaceAll('</script','<\\/script')+'</script>';
+const stage=root+'/outputs/player-leaders-controls';mkdirSync(stage,{recursive:true});writeFileSync(stage+'/qa.html',html);
+const server=createServer((req,res)=>{if(req.url==='/'){res.setHeader('Content-Type','text/html');res.end(html);return;}const p=req.url.split('?')[0]==='/api/media/qa-neon-14'?root+'/public/live-board-templates/standing-compact-neon-14-v1.png':root+'/public'+decodeURIComponent(req.url.split('?')[0]);if(existsSync(p)){res.end(readFileSync(p));return;}res.statusCode=404;res.end();});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const profile=mkdtempSync(tmpdir()+'/overlay-exit-');
+const browser=spawn('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',['--headless=new','--disable-gpu','--no-first-run','--no-default-browser-check','--remote-debugging-port=0','--user-data-dir='+profile,'about:blank'],{windowsHide:true,stdio:'ignore'});
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));let ws;
+try{
+ for(let i=0;i<100&&!existsSync(profile+'/DevToolsActivePort');i++)await sleep(100);
+ const port=readFileSync(profile+'/DevToolsActivePort','utf8').split('\n')[0];
+ const pages=await (await fetch('http://127.0.0.1:'+port+'/json')).json();
+ ws=new WebSocket(pages.find(page=>page.type==='page'&&page.url==='about:blank').webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));
+ let id=0;const pending=new Map(),errors=[];
+ ws.addEventListener('message',event=>{const m=JSON.parse(event.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result);}if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails);});
+ const call=(method,params={})=>new Promise((resolve,reject)=>{pending.set(++id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
+ const evaluate=async expression=>{const result=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(result.exceptionDetails)throw Error(JSON.stringify(result.exceptionDetails));return result.result.value;};
+ await call('Runtime.enable');await call('Page.enable');await call('Emulation.setDeviceMetricsOverride',{width:1920,height:1080,deviceScaleFactor:1,mobile:false});
+ await call('Page.navigate',{url:'http://127.0.0.1:'+server.address().port});
+
+ for(let i=0;i<100&&!await evaluate('window.qaReady===true');i++)await sleep(50);
+ assert.ok(await evaluate('window.qaReady===true'));
+ const waitFor=async expression=>{for(let i=0;i<100;i++){if(await evaluate(expression))return;await sleep(30);}throw Error('Timed out: '+expression);};
+ const click=async(kind,hide=false)=>{await evaluate(`document.querySelectorAll('.player-leader-publish>div')[${kind==='elims'?0:1}].querySelectorAll(':scope > .player-leader-actions .button')[${hide?1:0}].click();true`);await sleep(60);};
+ const rows=kind=>evaluate(`document.querySelectorAll('#${kind} .leader-data-row').length`);
+ const exiting=kind=>evaluate(`!!document.querySelector('#${kind} [data-overlay-exiting]')`);
+ const remember=()=>evaluate(`window.saved={elims:document.querySelector('#elims .leader-data-row'),damage:document.querySelector('#damage .leader-data-row'),elimsPreview:document.querySelector('.player-leader-preview .leader-data-row'),damagePreview:document.querySelector('.secondary-preview .leader-data-row')};true`);
+ assert.equal(await rows('elims'),0);assert.equal(await rows('damage'),0);
+ await waitFor("document.querySelectorAll('#studio .leader-data-row').length===10");await remember();await click('elims');
+ assert.equal(await rows('elims'),5);assert.equal(await rows('damage'),0);
+ assert.equal(await evaluate('window.qaState.playerOverlays.damage.onAir'),false);
+ assert.equal(await exiting('elims'),false);
+ const headerTiming=await evaluate(`(()=>{const n=document.querySelector('#elims .leader-header-motion');const a=n.getAnimations().find(a=>a instanceof CSSAnimation);return {name:a.animationName,delay:a.effect.getTiming().delay,duration:a.effect.getTiming().duration,width:n.offsetWidth,height:n.offsetHeight};})()`);
+ assert.deepEqual(headerTiming,{name:'leader-row-slide',delay:0,duration:500,width:442,height:50});
+ const checkTitle=async kind=>{
+  await waitFor(`document.querySelector('#${kind} .leader-kv-header')?.complete===true`);
+  const dimensions=await evaluate(`(()=>{const node=document.querySelector('#${kind} .leader-kv-header');const host=node.parentElement;host.getAnimations().forEach(a=>a.finish());return {imageWidth:node.offsetWidth,imageHeight:node.offsetHeight,left:node.offsetLeft,top:node.offsetTop};})()`);
+  await evaluate(`document.querySelectorAll('#root>div').forEach(n=>n.style.display=n.id==='${kind}'?'block':'none');true`);
+  const shot=await call('Page.captureScreenshot',{format:'png',clip:{x:1472,y:300,width:448,height:70,scale:1}});
+  writeFileSync(stage+'/title-'+kind+'-'+dimensions.imageWidth+'.png',Buffer.from(shot.data,'base64'));
+  await evaluate("document.querySelectorAll('#root>div').forEach(n=>n.style.display='');true");
+  assert.deepEqual(dimensions,{imageWidth:1920,imageHeight:1080,left:-1478,top:-310},'title must retain original image size under production preflight');
+ };
+ await checkTitle('elims');
+
+
+ assert.ok(await evaluate("saved.damagePreview===document.querySelector('.secondary-preview .leader-data-row')"),'publishing elims must not replay damage preview');
+ assert.ok(await evaluate("saved.elimsPreview!==document.querySelector('.player-leader-preview .leader-data-row')"),'only requested preview replays');
+ await remember();await click('elims');
+ assert.equal(await exiting('elims'),false);
+ assert.ok(await evaluate("saved.elims!==document.querySelector('#elims .leader-data-row')"),'republish immediately mounts new entrance');
+ assert.equal(await rows('damage'),0);
+ assert.ok(await evaluate("saved.damagePreview===document.querySelector('.secondary-preview .leader-data-row')"));
+ await remember();await click('damage');assert.equal(await rows('damage'),5);
+ await checkTitle('damage');
+ assert.ok(await evaluate("saved.elims===document.querySelector('#elims .leader-data-row')"),'damage publish preserves on-air elims');
+ assert.ok(await evaluate("saved.elimsPreview===document.querySelector('.player-leader-preview .leader-data-row')"));
+ await remember();await evaluate("window.qa('refresh')");await sleep(60);
+ assert.ok(await evaluate("saved.damagePreview===document.querySelector('.secondary-preview .leader-data-row')&&saved.elimsPreview===document.querySelector('.player-leader-preview .leader-data-row')"),'saving shared state does not replay either preview');
+ await evaluate("window.qa('stats')");await waitFor("document.querySelector('#elims .leader-field-elims').textContent==='777'");
+ assert.ok(await evaluate("saved.elims===document.querySelector('#elims .leader-data-row')&&saved.damage===document.querySelector('#damage .leader-data-row')"),'live updates preserve both output rows');
+ await click('elims',true);assert.equal(await exiting('elims'),true);assert.equal(await exiting('damage'),false);
+ assert.equal(await evaluate("document.querySelector('#elims .leader-header-motion').getAnimations().find(a=>!(a instanceof CSSAnimation)).effect.getTiming().delay"),300,'title exits after all five players');
+ assert.equal(await evaluate("document.querySelectorAll('#elims .leader-data-row')[4].getAnimations().find(a=>!(a instanceof CSSAnimation)).effect.getTiming().delay"),0,'last player exits first');
+
+ assert.equal(await evaluate('window.qaState.playerOverlays.damage.onAir'),true);
+ await click('elims');assert.equal(await exiting('elims'),false);assert.equal(await rows('elims'),5);
+ assert.ok(await evaluate("saved.damage===document.querySelector('#damage .leader-data-row')"),'hide/show elims does not touch damage');
+ await click('damage',true);assert.ok(await exiting('damage'));assert.equal(await exiting('elims'),false);
+ await click('damage');assert.equal(await exiting('damage'),false);
+ assert.deepEqual(await evaluate("Array.from(document.querySelectorAll('.player-leader-publish>div>label input'),n=>new URL(n.value).searchParams.get('view'))"),['player-elims','player-damage']);
+ await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ await click('damage',true);assert.equal(await rows('damage'),0);assert.equal(await rows('elims'),5);
+ assert.equal(await evaluate("document.querySelector('#elims .leader-header-motion').getAnimations().length"),0);
+ assert.deepEqual(errors,[]);
+ console.log('PASS: animated leader title IN first/OUT last, reduced motion; actual publish/hide controls independent for ELIMS and DAMAGE, separate OBS links, no outgoing animation on publish/re-publish or interrupted exit, only selected preview replays, shared-state saves/live updates preserve rows, reduced motion, no browser errors.');
+}finally{ws?.close();browser.kill();server.close();}
